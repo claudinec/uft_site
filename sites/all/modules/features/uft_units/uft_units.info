@@ -13,7 +13,6 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = feeds
 dependencies[] = feeds_tamper
-dependencies[] = field_collection
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = filefield_sources
