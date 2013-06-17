@@ -138,6 +138,31 @@ function uft_units_feeds_importer_default() {
             'target' => 'field_courses',
             'unique' => FALSE,
           ),
+          19 => array(
+            'source' => 'Disciplines',
+            'target' => 'field_unit_disciplines',
+            'unique' => FALSE,
+          ),
+          20 => array(
+            'source' => 'Years Offered',
+            'target' => 'field_years_offered',
+            'unique' => FALSE,
+          ),
+          21 => array(
+            'source' => 'Semester',
+            'target' => 'field_unit_semester',
+            'unique' => FALSE,
+          ),
+          22 => array(
+            'source' => 'Day',
+            'target' => 'field_unit_day',
+            'unique' => FALSE,
+          ),
+          23 => array(
+            'source' => 'Notes',
+            'target' => 'field_unit_timetable_notes',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '1',
         'input_format' => 'html',

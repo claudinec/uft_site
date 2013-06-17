@@ -120,7 +120,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -181,7 +181,7 @@ function uft_units_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 21,
+      'weight' => 26,
     ),
   );
 
@@ -666,6 +666,89 @@ function uft_units_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-unit-field_unit_day'
+  $field_instances['node-unit-field_unit_day'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_day',
+    'label' => 'Unit Day',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_unit_disciplines'
+  $field_instances['node-unit-field_unit_disciplines'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 24,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_disciplines',
+    'label' => 'Unit Disciplines',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_widgets',
+      'settings' => array(
+        'autocomplete_case' => 1,
+        'autocomplete_match' => 'contains',
+        'autocomplete_xss' => 0,
+        'i18n_flddata' => 0,
+        'obey_access_controls' => 1,
+        'order' => 'ASC',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_widgets_flddata',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-unit-field_unit_field'
   $field_instances['node-unit-field_unit_field'] = array(
     'bundle' => 'unit',
@@ -699,7 +782,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -744,6 +827,147 @@ function uft_units_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-unit-field_unit_semester'
+  $field_instances['node-unit-field_unit_semester'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_semester',
+    'label' => 'Unit Semester',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_unit_time'
+  $field_instances['node-unit-field_unit_time'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'timefield',
+        'settings' => array(
+          'display_format' => array(
+            'hour' => 'g',
+            'minute' => 'i',
+            'period' => 'a',
+            'period_separator' => '',
+            'separator' => ':',
+          ),
+        ),
+        'type' => 'timefield_default',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_time',
+    'label' => 'Unit Time',
+    'required' => 0,
+    'settings' => array(
+      'disable_plugin' => 0,
+      'input_format' => array(
+        'am_text' => 'AM',
+        'atPosition' => 'left bottom',
+        'closeButtonText' => 'Done',
+        'deselectButtonText' => 'Deselect',
+        'myPosition' => 'left top',
+        'nowButtonText' => 'Now',
+        'periodSeparator' => '',
+        'pm_text' => 'PM',
+        'separator' => ':',
+        'showCloseButton' => 1,
+        'showDeselectButton' => 0,
+        'showLeadingZero' => 0,
+        'showNowButton' => 0,
+        'showPeriod' => 1,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'timefield',
+      'settings' => array(
+        'label_position' => 'above',
+      ),
+      'type' => 'timefield_standard',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_unit_timetable_notes'
+  $field_instances['node-unit-field_unit_timetable_notes'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 26,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_timetable_notes',
+    'label' => 'Unit Timetable Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 25,
+    ),
+  );
+
   // Exported field_instance: 'node-unit-field_unit_value'
   $field_instances['node-unit-field_unit_value'] = array(
     'bundle' => 'unit',
@@ -782,6 +1006,52 @@ function uft_units_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_years_offered'
+  $field_instances['node-unit-field_years_offered'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_years_offered',
+    'label' => 'Years Offered',
+    'required' => 0,
+    'settings' => array(
+      'max' => 2020,
+      'min' => 2012,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 21,
     ),
   );
 
@@ -838,9 +1108,15 @@ function uft_units_field_default_field_instances() {
   t('Undergraduate Level');
   t('Unit Code');
   t('Unit Content');
+  t('Unit Day');
+  t('Unit Disciplines');
   t('Unit Field');
   t('Unit Frequency');
+  t('Unit Semester');
+  t('Unit Time');
+  t('Unit Timetable Notes');
   t('Unit Value');
+  t('Years Offered');
 
   return $field_instances;
 }
