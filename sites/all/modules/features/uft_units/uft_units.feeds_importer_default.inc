@@ -163,6 +163,11 @@ function uft_units_feeds_importer_default() {
             'target' => 'field_unit_timetable_notes',
             'unique' => FALSE,
           ),
+          24 => array(
+            'source' => 'Lecturers',
+            'target' => 'field_lecturers',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '1',
         'input_format' => 'html',

@@ -129,6 +129,35 @@ function uft_units_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_lecturers'
+  $field_bases['field_lecturers'] = array(
+    'active' => 1,
+    'cardinality' => 4,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_lecturers',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_mdiv_type_of_study'
   $field_bases['field_mdiv_type_of_study'] = array(
     'active' => 1,
@@ -311,8 +340,10 @@ function uft_units_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'M' => 'MCD University of Divinity',
         'U' => 'UFT',
         'W' => 'Whitley',
+        'Y' => 'Yarra Theological Union',
       ),
       'allowed_values_function' => '',
     ),

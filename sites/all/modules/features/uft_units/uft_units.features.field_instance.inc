@@ -181,7 +181,7 @@ function uft_units_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -222,6 +222,52 @@ function uft_units_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_lecturers'
+  $field_instances['node-unit-field_lecturers'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_lecturers',
+    'label' => 'Lecturers',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_widgets',
+      'settings' => array(
+        'autocomplete_case' => 1,
+        'autocomplete_match' => 'contains',
+        'autocomplete_xss' => 0,
+        'i18n_flddata' => 0,
+        'obey_access_controls' => 1,
+        'order' => 'ASC',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_widgets_flddata',
+      'weight' => 21,
     ),
   );
 
@@ -699,7 +745,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -860,7 +906,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -924,7 +970,7 @@ function uft_units_field_default_field_instances() {
         'label_position' => 'above',
       ),
       'type' => 'timefield_standard',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -964,7 +1010,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -1051,7 +1097,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -1097,6 +1143,7 @@ function uft_units_field_default_field_instances() {
   t('Discipline ID');
   t('File attachments');
   t('Learning Outcomes');
+  t('Lecturers');
   t('MDiv Type of Study');
   t('Mode of Teaching');
   t('Postgraduate Level');

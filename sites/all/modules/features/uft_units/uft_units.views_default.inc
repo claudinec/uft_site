@@ -36,18 +36,30 @@ function uft_units_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_semester',
+      'field' => 'field_unit_semester',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
   );
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_unit_code' => 'field_unit_code',
     'title' => 'title',
-    'field_day' => 'field_day',
-    'field_semester' => 'field_semester',
+    'field_courses' => 'field_courses',
+    'field_mode_of_teaching' => 'field_mode_of_teaching',
+    'field_years_offered' => 'field_years_offered',
+    'field_unit_semester' => 'field_unit_semester',
+    'field_unit_day' => 'field_unit_day',
+    'field_unit_time' => 'field_unit_time',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_unit_code' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -55,19 +67,41 @@ function uft_units_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_day' => array(
+    'field_courses' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_mode_of_teaching' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_years_offered' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_unit_semester' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_semester' => array(
+    'field_unit_day' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
-      'empty_column' => 0,
+      'empty_column' => 1,
+    ),
+    'field_unit_time' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
   );
   /* Field: Content: Unit Code */
@@ -104,6 +138,42 @@ function uft_units_views_default_views() {
     'prefix_suffix' => 1,
   );
   $handler->display->display_options['fields']['field_years_offered']['delta_offset'] = '0';
+  /* Field: Content: Unit Semester */
+  $handler->display->display_options['fields']['field_unit_semester']['id'] = 'field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['table'] = 'field_data_field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['field'] = 'field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['label'] = 'Semester';
+  /* Field: Content: Unit Day */
+  $handler->display->display_options['fields']['field_unit_day']['id'] = 'field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['table'] = 'field_data_field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['field'] = 'field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['label'] = 'Day';
+  /* Field: Content: Unit Time */
+  $handler->display->display_options['fields']['field_unit_time']['id'] = 'field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['table'] = 'field_data_field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['field'] = 'field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['label'] = 'Time';
+  $handler->display->display_options['fields']['field_unit_time']['settings'] = array(
+    'display_format' => array(
+      'hour' => 'g',
+      'minute' => 'i',
+      'separator' => ':',
+      'period' => 'a',
+      'period_separator' => '',
+    ),
+  );
+  /* Sort criterion: Content: Unit Semester (field_unit_semester) */
+  $handler->display->display_options['sorts']['field_unit_semester_value']['id'] = 'field_unit_semester_value';
+  $handler->display->display_options['sorts']['field_unit_semester_value']['table'] = 'field_data_field_unit_semester';
+  $handler->display->display_options['sorts']['field_unit_semester_value']['field'] = 'field_unit_semester_value';
+  /* Sort criterion: Content: Unit Day (field_unit_day) */
+  $handler->display->display_options['sorts']['field_unit_day_value']['id'] = 'field_unit_day_value';
+  $handler->display->display_options['sorts']['field_unit_day_value']['table'] = 'field_data_field_unit_day';
+  $handler->display->display_options['sorts']['field_unit_day_value']['field'] = 'field_unit_day_value';
+  /* Sort criterion: Content: Unit Time (field_unit_time) */
+  $handler->display->display_options['sorts']['field_unit_time_value']['id'] = 'field_unit_time_value';
+  $handler->display->display_options['sorts']['field_unit_time_value']['table'] = 'field_data_field_unit_time';
+  $handler->display->display_options['sorts']['field_unit_time_value']['field'] = 'field_unit_time_value';
   /* Sort criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
