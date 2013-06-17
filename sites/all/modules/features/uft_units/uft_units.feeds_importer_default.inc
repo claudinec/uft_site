@@ -22,6 +22,11 @@ function uft_units_feeds_importer_default() {
       'config' => array(
         'allowed_extensions' => 'txt csv tsv xml opml',
         'direct' => FALSE,
+        'directory' => 'private://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+          1 => 'private',
+        ),
       ),
     ),
     'parser' => array(
@@ -34,7 +39,6 @@ function uft_units_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'unit',
         'expire' => '-1',
         'author' => '1',
         'authorize' => 1,
@@ -138,6 +142,7 @@ function uft_units_feeds_importer_default() {
         'update_existing' => '1',
         'input_format' => 'html',
         'skip_hash_check' => 0,
+        'bundle' => 'unit',
       ),
     ),
     'content_type' => '',
