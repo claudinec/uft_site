@@ -72,7 +72,6 @@ features[field_base][] = field_unit_time
 features[field_base][] = field_unit_timetable_notes
 features[field_base][] = field_unit_value
 features[field_base][] = field_years_offered
-features[field_instance][] = node-unit-field_corequisites
 features[field_instance][] = node-unit-field_courses
 features[field_instance][] = node-unit-field_department
 features[field_instance][] = node-unit-field_file_attachments
