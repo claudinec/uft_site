@@ -70,8 +70,6 @@ function uft_units_views_default_views() {
       'empty_column' => 0,
     ),
   );
-
-
   /* Field: Content: Unit Code */
   $handler->display->display_options['fields']['field_unit_code']['id'] = 'field_unit_code';
   $handler->display->display_options['fields']['field_unit_code']['table'] = 'field_data_field_unit_code';
@@ -97,12 +95,10 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
-
   /* Sort criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
   $handler->display->display_options['sorts']['field_unit_code_value']['field'] = 'field_unit_code_value';
-
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -118,7 +114,6 @@ function uft_units_views_default_views() {
     'unit' => 'unit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-
   /* Filter criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['filters']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['filters']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
