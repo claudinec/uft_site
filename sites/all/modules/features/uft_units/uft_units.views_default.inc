@@ -95,6 +95,15 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
+  /* Field: Content: Years Offered */
+  $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['field'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_years_offered']['delta_offset'] = '0';
   /* Sort criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
@@ -172,6 +181,40 @@ function uft_units_views_default_views() {
   $handler->display->display_options['filters']['field_courses_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Mode of Teaching (field_mode_of_teaching) */
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['id'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['table'] = 'field_data_field_mode_of_teaching';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['field'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['operator_id'] = 'field_mode_of_teaching_value_op';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['label'] = 'Mode of Teaching';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['operator'] = 'field_mode_of_teaching_value_op';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['identifier'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Years Offered (field_years_offered) */
+  $handler->display->display_options['filters']['field_years_offered_value']['id'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['filters']['field_years_offered_value']['field'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2013';
+  $handler->display->display_options['filters']['field_years_offered_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator_id'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['label'] = 'Years Offered';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['identifier'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
     3 => 0,
     4 => 0,
   );
