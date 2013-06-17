@@ -36,18 +36,30 @@ function uft_units_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_semester',
+      'field' => 'field_unit_semester',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
   );
   $handler->display->display_options['style_options']['columns'] = array(
+    'field_unit_code' => 'field_unit_code',
     'title' => 'title',
-    'field_day' => 'field_day',
-    'field_semester' => 'field_semester',
+    'field_courses' => 'field_courses',
+    'field_mode_of_teaching' => 'field_mode_of_teaching',
+    'field_years_offered' => 'field_years_offered',
+    'field_unit_semester' => 'field_unit_semester',
+    'field_unit_day' => 'field_unit_day',
+    'field_unit_time' => 'field_unit_time',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_unit_code' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -55,54 +67,41 @@ function uft_units_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_day' => array(
+    'field_courses' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_mode_of_teaching' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_years_offered' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_unit_semester' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_semester' => array(
+    'field_unit_day' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
-      'empty_column' => 0,
+      'empty_column' => 1,
     ),
-  );
-  /* Relationship: Content: Timetable (field_timetable) */
-  $handler->display->display_options['relationships']['field_timetable_value']['id'] = 'field_timetable_value';
-  $handler->display->display_options['relationships']['field_timetable_value']['table'] = 'field_data_field_timetable';
-  $handler->display->display_options['relationships']['field_timetable_value']['field'] = 'field_timetable_value';
-  $handler->display->display_options['relationships']['field_timetable_value']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_timetable_value']['delta'] = '-1';
-  /* Field: Field collection item: Semester */
-  $handler->display->display_options['fields']['field_semester']['id'] = 'field_semester';
-  $handler->display->display_options['fields']['field_semester']['table'] = 'field_data_field_semester';
-  $handler->display->display_options['fields']['field_semester']['field'] = 'field_semester';
-  $handler->display->display_options['fields']['field_semester']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['fields']['field_semester']['label'] = '';
-  $handler->display->display_options['fields']['field_semester']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_semester']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Day */
-  $handler->display->display_options['fields']['field_day']['id'] = 'field_day';
-  $handler->display->display_options['fields']['field_day']['table'] = 'field_data_field_day';
-  $handler->display->display_options['fields']['field_day']['field'] = 'field_day';
-  $handler->display->display_options['fields']['field_day']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['fields']['field_day']['hide_empty'] = TRUE;
-  /* Field: Field collection item: Timetable Time */
-  $handler->display->display_options['fields']['field_timetable_time']['id'] = 'field_timetable_time';
-  $handler->display->display_options['fields']['field_timetable_time']['table'] = 'field_data_field_timetable_time';
-  $handler->display->display_options['fields']['field_timetable_time']['field'] = 'field_timetable_time';
-  $handler->display->display_options['fields']['field_timetable_time']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['fields']['field_timetable_time']['label'] = 'Time';
-  $handler->display->display_options['fields']['field_timetable_time']['settings'] = array(
-    'display_format' => array(
-      'hour' => 'g',
-      'minute' => 'i',
-      'separator' => ':',
-      'period' => 'a',
-      'period_separator' => '',
+    'field_unit_time' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
   );
   /* Field: Content: Unit Code */
@@ -130,36 +129,55 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
-  /* Sort criterion: Field collection item: Semester (field_semester) */
-  $handler->display->display_options['sorts']['field_semester_value']['id'] = 'field_semester_value';
-  $handler->display->display_options['sorts']['field_semester_value']['table'] = 'field_data_field_semester';
-  $handler->display->display_options['sorts']['field_semester_value']['field'] = 'field_semester_value';
-  $handler->display->display_options['sorts']['field_semester_value']['relationship'] = 'field_timetable_value';
-  /* Sort criterion: Field collection item: Day (field_day) */
-  $handler->display->display_options['sorts']['field_day_value']['id'] = 'field_day_value';
-  $handler->display->display_options['sorts']['field_day_value']['table'] = 'field_data_field_day';
-  $handler->display->display_options['sorts']['field_day_value']['field'] = 'field_day_value';
-  $handler->display->display_options['sorts']['field_day_value']['relationship'] = 'field_timetable_value';
-  /* Sort criterion: Field collection item: Timetable Time (field_timetable_time) */
-  $handler->display->display_options['sorts']['field_timetable_time_value']['id'] = 'field_timetable_time_value';
-  $handler->display->display_options['sorts']['field_timetable_time_value']['table'] = 'field_data_field_timetable_time';
-  $handler->display->display_options['sorts']['field_timetable_time_value']['field'] = 'field_timetable_time_value';
-  $handler->display->display_options['sorts']['field_timetable_time_value']['relationship'] = 'field_timetable_value';
+  /* Field: Content: Years Offered */
+  $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['field'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_years_offered']['delta_offset'] = '0';
+  /* Field: Content: Unit Semester */
+  $handler->display->display_options['fields']['field_unit_semester']['id'] = 'field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['table'] = 'field_data_field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['field'] = 'field_unit_semester';
+  $handler->display->display_options['fields']['field_unit_semester']['label'] = 'Semester';
+  /* Field: Content: Unit Day */
+  $handler->display->display_options['fields']['field_unit_day']['id'] = 'field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['table'] = 'field_data_field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['field'] = 'field_unit_day';
+  $handler->display->display_options['fields']['field_unit_day']['label'] = 'Day';
+  /* Field: Content: Unit Time */
+  $handler->display->display_options['fields']['field_unit_time']['id'] = 'field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['table'] = 'field_data_field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['field'] = 'field_unit_time';
+  $handler->display->display_options['fields']['field_unit_time']['label'] = 'Time';
+  $handler->display->display_options['fields']['field_unit_time']['settings'] = array(
+    'display_format' => array(
+      'hour' => 'g',
+      'minute' => 'i',
+      'separator' => ':',
+      'period' => 'a',
+      'period_separator' => '',
+    ),
+  );
+  /* Sort criterion: Content: Unit Semester (field_unit_semester) */
+  $handler->display->display_options['sorts']['field_unit_semester_value']['id'] = 'field_unit_semester_value';
+  $handler->display->display_options['sorts']['field_unit_semester_value']['table'] = 'field_data_field_unit_semester';
+  $handler->display->display_options['sorts']['field_unit_semester_value']['field'] = 'field_unit_semester_value';
+  /* Sort criterion: Content: Unit Day (field_unit_day) */
+  $handler->display->display_options['sorts']['field_unit_day_value']['id'] = 'field_unit_day_value';
+  $handler->display->display_options['sorts']['field_unit_day_value']['table'] = 'field_data_field_unit_day';
+  $handler->display->display_options['sorts']['field_unit_day_value']['field'] = 'field_unit_day_value';
+  /* Sort criterion: Content: Unit Time (field_unit_time) */
+  $handler->display->display_options['sorts']['field_unit_time_value']['id'] = 'field_unit_time_value';
+  $handler->display->display_options['sorts']['field_unit_time_value']['table'] = 'field_data_field_unit_time';
+  $handler->display->display_options['sorts']['field_unit_time_value']['field'] = 'field_unit_time_value';
   /* Sort criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
   $handler->display->display_options['sorts']['field_unit_code_value']['field'] = 'field_unit_code_value';
-  /* Contextual filter: Field collection item: Timetable Year (field_timetable_year) */
-  $handler->display->display_options['arguments']['field_timetable_year_value']['id'] = 'field_timetable_year_value';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['table'] = 'field_data_field_timetable_year';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['field'] = 'field_timetable_year_value';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['default_argument_options']['argument'] = '2013';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_timetable_year_value']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -175,42 +193,6 @@ function uft_units_views_default_views() {
     'unit' => 'unit',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Field collection item: Timetable Year (field_timetable_year) */
-  $handler->display->display_options['filters']['field_timetable_year_value']['id'] = 'field_timetable_year_value';
-  $handler->display->display_options['filters']['field_timetable_year_value']['table'] = 'field_data_field_timetable_year';
-  $handler->display->display_options['filters']['field_timetable_year_value']['field'] = 'field_timetable_year_value';
-  $handler->display->display_options['filters']['field_timetable_year_value']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['filters']['field_timetable_year_value']['value']['value'] = '2013';
-  $handler->display->display_options['filters']['field_timetable_year_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_timetable_year_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['operator_id'] = 'field_timetable_year_value_op';
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['label'] = 'Timetable Year';
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['operator'] = 'field_timetable_year_value_op';
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['identifier'] = 'field_timetable_year_value';
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_timetable_year_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => '1',
-    3 => 0,
-    4 => 0,
-  );
-  /* Filter criterion: Field collection item: Semester (field_semester) */
-  $handler->display->display_options['filters']['field_semester_value']['id'] = 'field_semester_value';
-  $handler->display->display_options['filters']['field_semester_value']['table'] = 'field_data_field_semester';
-  $handler->display->display_options['filters']['field_semester_value']['field'] = 'field_semester_value';
-  $handler->display->display_options['filters']['field_semester_value']['relationship'] = 'field_timetable_value';
-  $handler->display->display_options['filters']['field_semester_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_semester_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_semester_value']['expose']['operator_id'] = 'field_semester_value_op';
-  $handler->display->display_options['filters']['field_semester_value']['expose']['label'] = 'Semester';
-  $handler->display->display_options['filters']['field_semester_value']['expose']['operator'] = 'field_semester_value_op';
-  $handler->display->display_options['filters']['field_semester_value']['expose']['identifier'] = 'field_semester_value';
-  $handler->display->display_options['filters']['field_semester_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
   /* Filter criterion: Content: Unit Code (field_unit_code) */
   $handler->display->display_options['filters']['field_unit_code_value']['id'] = 'field_unit_code_value';
   $handler->display->display_options['filters']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
@@ -272,16 +254,51 @@ function uft_units_views_default_views() {
     3 => 0,
     4 => 0,
   );
+  /* Filter criterion: Content: Mode of Teaching (field_mode_of_teaching) */
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['id'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['table'] = 'field_data_field_mode_of_teaching';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['field'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['operator_id'] = 'field_mode_of_teaching_value_op';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['label'] = 'Mode of Teaching';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['operator'] = 'field_mode_of_teaching_value_op';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['identifier'] = 'field_mode_of_teaching_value';
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_mode_of_teaching_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Years Offered (field_years_offered) */
+  $handler->display->display_options['filters']['field_years_offered_value']['id'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['filters']['field_years_offered_value']['field'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2013';
+  $handler->display->display_options['filters']['field_years_offered_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator_id'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['label'] = 'Years Offered';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['identifier'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    3 => 0,
+    4 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'timetable';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Timetables';
+  $handler->display->display_options['menu']['title'] = 'Units and Timetables';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Error check */
   $handler = $view->new_display('page', 'Error check', 'page_1');
@@ -357,19 +374,6 @@ function uft_units_views_default_views() {
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-    ),
-    'action::views_bulk_operations_modify_action' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'settings' => array(
-        'show_all_tokens' => 1,
-        'display_values' => array(
-          'unit::field_timetable' => 'unit::field_timetable',
-        ),
-      ),
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
