@@ -540,49 +540,6 @@ function uft_units_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-unit-field_timetable'
-  $field_instances['node-unit-field_timetable'] = array(
-    'bundle' => 'unit',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_timetable',
-    'label' => 'Timetable',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-unit-field_undergraduate_level'
   $field_instances['node-unit-field_undergraduate_level'] = array(
     'bundle' => 'unit',
@@ -878,7 +835,6 @@ function uft_units_field_default_field_instances() {
   t('Prohibited Combinations');
   t('RTI');
   t('Teaching Methods');
-  t('Timetable');
   t('Undergraduate Level');
   t('Unit Code');
   t('Unit Content');

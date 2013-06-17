@@ -70,12 +70,11 @@ function uft_units_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Content: Timetable (field_timetable) */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_timetable_value']['id'] = 'field_timetable_value';
   $handler->display->display_options['relationships']['field_timetable_value']['table'] = 'field_data_field_timetable';
   $handler->display->display_options['relationships']['field_timetable_value']['field'] = 'field_timetable_value';
   $handler->display->display_options['relationships']['field_timetable_value']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_timetable_value']['delta'] = '-1';
   /* Field: Field collection item: Semester */
   $handler->display->display_options['fields']['field_semester']['id'] = 'field_semester';
   $handler->display->display_options['fields']['field_semester']['table'] = 'field_data_field_semester';
@@ -84,7 +83,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_semester']['label'] = '';
   $handler->display->display_options['fields']['field_semester']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_semester']['element_label_colon'] = FALSE;
-  /* Field: Field collection item: Day */
+  /* Field: : field_day */
   $handler->display->display_options['fields']['field_day']['id'] = 'field_day';
   $handler->display->display_options['fields']['field_day']['table'] = 'field_data_field_day';
   $handler->display->display_options['fields']['field_day']['field'] = 'field_day';
@@ -135,7 +134,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['sorts']['field_semester_value']['table'] = 'field_data_field_semester';
   $handler->display->display_options['sorts']['field_semester_value']['field'] = 'field_semester_value';
   $handler->display->display_options['sorts']['field_semester_value']['relationship'] = 'field_timetable_value';
-  /* Sort criterion: Field collection item: Day (field_day) */
+  /* Sort criterion: : field_day (field_day) */
   $handler->display->display_options['sorts']['field_day_value']['id'] = 'field_day_value';
   $handler->display->display_options['sorts']['field_day_value']['table'] = 'field_data_field_day';
   $handler->display->display_options['sorts']['field_day_value']['field'] = 'field_day_value';
