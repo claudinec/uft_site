@@ -23,7 +23,6 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = pathauto
-dependencies[] = revisioning
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

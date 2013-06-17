@@ -49,41 +49,5 @@ function uft_courses_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: publish revisions of any course content.
-  $permissions['publish revisions of any course content'] = array(
-    'name' => 'publish revisions of any course content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
-  // Exported permission: publish revisions of own course content.
-  $permissions['publish revisions of own course content'] = array(
-    'name' => 'publish revisions of own course content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
-  // Exported permission: view revisions of any course content.
-  $permissions['view revisions of any course content'] = array(
-    'name' => 'view revisions of any course content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
-  // Exported permission: view revisions of own course content.
-  $permissions['view revisions of own course content'] = array(
-    'name' => 'view revisions of own course content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
   return $permissions;
 }
