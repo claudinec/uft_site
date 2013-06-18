@@ -115,7 +115,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Unit Title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Courses */
+  /* Field: : field_courses */
   $handler->display->display_options['fields']['field_courses']['id'] = 'field_courses';
   $handler->display->display_options['fields']['field_courses']['table'] = 'field_data_field_courses';
   $handler->display->display_options['fields']['field_courses']['field'] = 'field_courses';
@@ -238,7 +238,7 @@ function uft_units_views_default_views() {
     2 => '2',
     1 => 0,
   );
-  /* Filter criterion: Content: Courses (field_courses) */
+  /* Filter criterion: : field_courses (field_courses) */
   $handler->display->display_options['filters']['field_courses_value']['id'] = 'field_courses_value';
   $handler->display->display_options['filters']['field_courses_value']['table'] = 'field_data_field_courses';
   $handler->display->display_options['filters']['field_courses_value']['field'] = 'field_courses_value';
@@ -466,7 +466,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Unit Title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Courses */
+  /* Field: : field_courses */
   $handler->display->display_options['fields']['field_courses']['id'] = 'field_courses';
   $handler->display->display_options['fields']['field_courses']['table'] = 'field_data_field_courses';
   $handler->display->display_options['fields']['field_courses']['field'] = 'field_courses';
