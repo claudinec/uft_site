@@ -16,7 +16,6 @@ dependencies[] = field_ui
 dependencies[] = list
 dependencies[] = node
 dependencies[] = options
-dependencies[] = revisioning
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = uft_handbook

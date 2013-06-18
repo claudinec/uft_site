@@ -434,15 +434,6 @@ function uft_users_user_default_permissions() {
     'module' => 'boxes',
   );
 
-  // Exported permission: edit revisions.
-  $permissions['edit revisions'] = array(
-    'name' => 'edit revisions',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
   // Exported permission: execute php code.
   $permissions['execute php code'] = array(
     'name' => 'execute php code',
@@ -482,15 +473,6 @@ function uft_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'backup_migrate',
-  );
-
-  // Exported permission: publish revisions.
-  $permissions['publish revisions'] = array(
-    'name' => 'publish revisions',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
   );
 
   // Exported permission: restore from backup.
@@ -545,15 +527,6 @@ function uft_users_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: unpublish current revision.
-  $permissions['unpublish current revision'] = array(
-    'name' => 'unpublish current revision',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
   // Exported permission: use PHP for title patterns.
   $permissions['use PHP for title patterns'] = array(
     'name' => 'use PHP for title patterns',
@@ -577,15 +550,6 @@ function uft_users_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: view revision status messages.
-  $permissions['view revision status messages'] = array(
-    'name' => 'view revision status messages',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
   );
 
   // Exported permission: view revisions.
