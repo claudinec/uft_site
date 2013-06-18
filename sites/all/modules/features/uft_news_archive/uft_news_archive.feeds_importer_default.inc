@@ -16,7 +16,7 @@ function uft_news_archive_feeds_importer_default() {
   $feeds_importer->id = 'news_archive';
   $feeds_importer->config = array(
     'name' => 'News archive',
-    'description' => '',
+    'description' => 'Import news articles from old site',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
