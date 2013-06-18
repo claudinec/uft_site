@@ -1,4 +1,5 @@
 name = UFT News Archive
+description = News archive type and import
 core = 7.x
 package = UFT
 php = 5.2.4
