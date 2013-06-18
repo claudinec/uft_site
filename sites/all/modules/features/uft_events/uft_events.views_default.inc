@@ -44,18 +44,10 @@ function uft_events_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Content: Event date */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'long',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -63,11 +55,11 @@ function uft_events_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Event location */
+  /* Field: : field_event_location */
   $handler->display->display_options['fields']['field_event_location']['id'] = 'field_event_location';
   $handler->display->display_options['fields']['field_event_location']['table'] = 'field_data_field_event_location';
   $handler->display->display_options['fields']['field_event_location']['field'] = 'field_event_location';
-  /* Sort criterion: Content: Event date -  start date (field_event_date) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
