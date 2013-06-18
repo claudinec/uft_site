@@ -67,24 +67,6 @@ function uft_staff_user_default_permissions() {
     'module' => 'feeds',
   );
 
-  // Exported permission: publish revisions of any staff_profile content.
-  $permissions['publish revisions of any staff_profile content'] = array(
-    'name' => 'publish revisions of any staff_profile content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
-  // Exported permission: publish revisions of own staff_profile content.
-  $permissions['publish revisions of own staff_profile content'] = array(
-    'name' => 'publish revisions of own staff_profile content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
   // Exported permission: tamper staff.
   $permissions['tamper staff'] = array(
     'name' => 'tamper staff',
@@ -97,24 +79,6 @@ function uft_staff_user_default_permissions() {
     'name' => 'unlock staff feeds',
     'roles' => array(),
     'module' => 'feeds',
-  );
-
-  // Exported permission: view revisions of any staff_profile content.
-  $permissions['view revisions of any staff_profile content'] = array(
-    'name' => 'view revisions of any staff_profile content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
-  );
-
-  // Exported permission: view revisions of own staff_profile content.
-  $permissions['view revisions of own staff_profile content'] = array(
-    'name' => 'view revisions of own staff_profile content',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'revisioning',
   );
 
   return $permissions;

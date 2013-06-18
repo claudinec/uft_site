@@ -99,7 +99,6 @@ function uft_staff_strongarm() {
   $strongarm->value = array(
     0 => 'status',
     1 => 'revision',
-    2 => 'revision_moderation',
   );
   $export['node_options_staff_profile'] = $strongarm;
 
