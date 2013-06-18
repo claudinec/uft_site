@@ -37,6 +37,7 @@ features[field_base][] = field_entry_requirements
 features[field_base][] = field_file_attachments
 features[field_base][] = field_graduate_outcomes
 features[field_base][] = field_modes_of_study
+features[field_instance][] = node-course-field_course_description
 features[field_instance][] = node-course-field_course_pathways
 features[field_instance][] = node-course-field_course_structure
 features[field_instance][] = node-course-field_course_type
