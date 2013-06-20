@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * UFT Staff feature.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function uft_staff_enable() {
+  _uft_staff_flush_revert();
+}
+
+/**
+ * Update staff feature.
+ */
+function uft_staff_update_7100() {
+  _uft_staff_flush_revert();
+}
+
+/**
+ * Helper function: flush caches and revert features.
+ */
+function _uft_staff_flush_revert() {
+  // field_purge_batch(10);
+  drupal_flush_all_caches();
+  features_revert(array('uft_staff'));
+}
+
