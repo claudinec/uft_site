@@ -5,6 +5,13 @@
  */
 
 /**
+ * Implements hook_enable().
+ */
+function uft_units_enable() {
+  _uft_units_flush_revert();
+}
+
+/**
  * Update unit feature.
  */
 function uft_units_update_7100() {
@@ -40,9 +47,37 @@ function uft_units_update_7104() {
 }
 
 /**
+ * Update unit feature.
+ */
+function uft_units_update_7105() {
+  _uft_units_flush_revert();
+}
+
+/**
+ * Update unit feature.
+ */
+function uft_units_update_7106() {
+  field_delete_field('field_lecturer');
+  field_delete_field('field_location');
+  field_delete_field('field_timetable_notes');
+  field_delete_field('field_timetable_time');
+  field_delete_field('field_timetable_year');
+  _uft_units_flush_revert();
+}
+
+/**
+ * Update unit feature.
+ */
+function uft_units_update_7107() {
+  field_collection_delete_field('field_timetable');
+  _uft_units_flush_revert();
+}
+
+/**
  * Helper function: flush caches and revert features.
  */
 function _uft_units_flush_revert() {
+  // field_purge_batch(10);
   drupal_flush_all_caches();
   features_revert(array('uft_units'));
 }

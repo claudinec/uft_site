@@ -10,6 +10,43 @@
 function uft_units_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-unit-field_courses'
+  $field_instances['node-unit-field_courses'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_courses',
+    'label' => 'Courses',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-unit-field_department'
   $field_instances['node-unit-field_department'] = array(
     'bundle' => 'unit',
@@ -1100,6 +1137,7 @@ function uft_units_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Courses');
   t('Department');
   t('Discipline ID');
   t('File attachments');

@@ -18,6 +18,7 @@ dependencies[] = node
 dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = text
+dependencies[] = uft_handbook
 dependencies[] = views
 features[ctools][] = feeds:feeds_importer_default:1
 features[ctools][] = feeds_tamper:feeds_tamper_default:2
