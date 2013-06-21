@@ -87,7 +87,7 @@ function uft_units_views_default_views() {
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
-      'empty_column' => 0,
+      'empty_column' => 1,
     ),
     'field_unit_day' => array(
       'sortable' => 1,
