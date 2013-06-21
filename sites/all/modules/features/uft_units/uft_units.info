@@ -47,7 +47,6 @@ features[feeds_tamper][] = units-department_name-explode
 features[feeds_tamper][] = units-disciplines-explode
 features[feeds_tamper][] = units-lecturers-explode
 features[feeds_tamper][] = units-mode_of_teaching-explode
-features[field_base][] = field_corequisites
 features[field_base][] = field_courses
 features[field_base][] = field_discipline_id
 features[field_base][] = field_learning_outcomes

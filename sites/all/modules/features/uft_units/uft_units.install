@@ -77,6 +77,22 @@ function uft_units_update_7107() {
  * Update unit feature.
  */
 function uft_units_update_7108() {
+  field_collection_delete_field('field_corequisites');
+  _uft_units_flush_revert();
+}
+
+/**
+ * Update unit feature.
+ */
+function uft_units_update_7109() {
+  _uft_units_flush_revert();
+}
+
+/**
+ * Update units feature: delete field_corequisites.
+ */
+function uft_units_update_7110() {
+  field_collection_delete_field('field_corequisites');
   _uft_units_flush_revert();
 }
 
@@ -84,7 +100,6 @@ function uft_units_update_7108() {
  * Helper function: flush caches and revert features.
  */
 function _uft_units_flush_revert() {
-  // field_purge_batch(10);
   drupal_flush_all_caches();
   features_revert(array('uft_units'));
 }
