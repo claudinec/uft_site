@@ -18,11 +18,11 @@ function uft_staff_menu_default_menu_links() {
     'link_title' => 'Staff',
     'options' => array(),
     'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '0',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
   );
   // Translatables
   // Included for use with string extractors like potx.
