@@ -163,6 +163,21 @@ function uft_units_feeds_importer_default() {
             'target' => 'field_recommended_reading',
             'unique' => FALSE,
           ),
+          24 => array(
+            'source' => 'Number of timetabled hours per week',
+            'target' => 'field_weekly_workload_class',
+            'unique' => FALSE,
+          ),
+          25 => array(
+            'source' => 'Expected personal study hours per week',
+            'target' => 'field_weekly_workload_personal',
+            'unique' => FALSE,
+          ),
+          26 => array(
+            'source' => 'Workload',
+            'target' => 'field_unit_workload',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '1',
         'input_format' => 'html',
