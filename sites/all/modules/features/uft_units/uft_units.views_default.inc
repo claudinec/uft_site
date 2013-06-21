@@ -87,7 +87,7 @@ function uft_units_views_default_views() {
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
-      'empty_column' => 0,
+      'empty_column' => 1,
     ),
     'field_unit_day' => array(
       'sortable' => 1,
@@ -142,12 +142,15 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_unit_semester']['id'] = 'field_unit_semester';
   $handler->display->display_options['fields']['field_unit_semester']['table'] = 'field_data_field_unit_semester';
   $handler->display->display_options['fields']['field_unit_semester']['field'] = 'field_unit_semester';
-  $handler->display->display_options['fields']['field_unit_semester']['label'] = 'Semester';
+  $handler->display->display_options['fields']['field_unit_semester']['label'] = '';
+  $handler->display->display_options['fields']['field_unit_semester']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_unit_semester']['element_label_colon'] = FALSE;
   /* Field: Content: Unit Day */
   $handler->display->display_options['fields']['field_unit_day']['id'] = 'field_unit_day';
   $handler->display->display_options['fields']['field_unit_day']['table'] = 'field_data_field_unit_day';
   $handler->display->display_options['fields']['field_unit_day']['field'] = 'field_unit_day';
   $handler->display->display_options['fields']['field_unit_day']['label'] = 'Day';
+  $handler->display->display_options['fields']['field_unit_day']['element_label_colon'] = FALSE;
   /* Field: Content: Unit Time */
   $handler->display->display_options['fields']['field_unit_time']['id'] = 'field_unit_time';
   $handler->display->display_options['fields']['field_unit_time']['table'] = 'field_data_field_unit_time';

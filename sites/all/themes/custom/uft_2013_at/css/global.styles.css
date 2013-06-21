@@ -1541,7 +1541,14 @@ th {
   vertical-align: middle;
 }
 
-caption,
+caption {
+  text-align: center;
+  background-color: lightgray;
+  font-size: x-large;
+  margin: 8px 2px 8px 2px;
+  padding: 0;
+}
+
 th,
 td {
   text-align: left;

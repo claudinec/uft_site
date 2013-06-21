@@ -178,6 +178,11 @@ function uft_units_feeds_importer_default() {
             'target' => 'field_unit_workload',
             'unique' => FALSE,
           ),
+          27 => array(
+            'source' => 'Course Type',
+            'target' => 'field_courses',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '1',
         'input_format' => 'html',
