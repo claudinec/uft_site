@@ -9,9 +9,9 @@ dependencies[] = libraries (>=2)
 
 configure = admin/config/services/mailchimp
 
-; Information added by drupal.org packaging script on 2013-01-29
-version = "7.x-2.10"
+; Information added by drupal.org packaging script on 2013-06-03
+version = "7.x-2.10+16-dev"
 core = "7.x"
 project = "mailchimp"
-datestamp = "1359482747"
+datestamp = "1370264341"
 
