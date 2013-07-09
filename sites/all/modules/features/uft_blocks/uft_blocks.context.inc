@@ -53,12 +53,13 @@ function uft_blocks_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'sitewide_blocks';
-  $context->description = 'Blocks to display on all pages.';
+  $context->description = 'Blocks to display on all pages except timetable.';
   $context->tag = 'blocks';
   $context->conditions = array(
-    'sitewide' => array(
+    'path' => array(
       'values' => array(
-        1 => 1,
+        '*' => '*',
+        '~timetable*' => '~timetable*',
       ),
     ),
   );
@@ -84,7 +85,7 @@ function uft_blocks_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blocks to display on all pages.');
+  t('Blocks to display on all pages except timetable.');
   t('blocks');
   $export['sitewide_blocks'] = $context;
 
