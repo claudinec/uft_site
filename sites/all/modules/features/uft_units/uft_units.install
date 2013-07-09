@@ -84,9 +84,9 @@ function uft_units_update_7108() {
 /**
  * Update unit feature.
  */
-function uft_units_update_7109() {
-  _uft_units_flush_revert();
-}
+// function uft_units_update_7109() {
+  // _uft_units_flush_revert();
+// }
 
 /**
  * Update units feature: delete field_corequisites.

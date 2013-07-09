@@ -30,7 +30,7 @@ function uft_blocks_context_default_contexts() {
           'module' => 'boxes',
           'delta' => 'indigenous_statement_box',
           'region' => 'sidebar_second',
-          'weight' => '0',
+          'weight' => '-10',
         ),
         'boxes-welcome' => array(
           'module' => 'boxes',
@@ -65,6 +65,12 @@ function uft_blocks_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu-menu-important-links' => array(
+          'module' => 'menu',
+          'delta' => 'menu-important-links',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
