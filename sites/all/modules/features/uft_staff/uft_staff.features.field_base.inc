@@ -54,10 +54,10 @@ function uft_staff_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Biblical Studies' => 'Biblical Studies',
-        'Christian Thought and History' => 'Christian Thought and History',
-        'Moral and Practical Theology' => 'Moral and Practical Theology',
-        'Philosophy' => 'Philosophy',
+        'A' => 'Philosophy',
+        'B' => 'Biblical Studies',
+        'C' => 'Christian Thought and History',
+        'D' => 'Moral and Practical Theology',
       ),
       'allowed_values_function' => '',
     ),
@@ -101,6 +101,33 @@ function uft_staff_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_postgraduate_supervision',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_publications'
+  $field_bases['field_publications'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_publications',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -259,6 +286,36 @@ function uft_staff_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_website'
+  $field_bases['field_website'] = array(
+    'active' => 1,
+    'cardinality' => 2,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_website',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'link',
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'link_field',
   );
 
   return $field_bases;

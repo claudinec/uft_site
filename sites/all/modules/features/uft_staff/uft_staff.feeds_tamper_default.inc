@@ -13,6 +13,18 @@ function uft_staff_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'staff-body-html_entity_decode';
+  $feeds_tamper->importer = 'staff';
+  $feeds_tamper->source = 'Body';
+  $feeds_tamper->plugin_id = 'html_entity_decode';
+  $feeds_tamper->settings = '';
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'HTML entity decode';
+  $export['staff-body-html_entity_decode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'staff-department_name-explode';
   $feeds_tamper->importer = 'staff';
   $feeds_tamper->source = 'Department Name';
