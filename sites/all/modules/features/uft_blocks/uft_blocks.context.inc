@@ -30,7 +30,7 @@ function uft_blocks_context_default_contexts() {
           'module' => 'boxes',
           'delta' => 'indigenous_statement_box',
           'region' => 'sidebar_second',
-          'weight' => '0',
+          'weight' => '-10',
         ),
         'boxes-welcome' => array(
           'module' => 'boxes',
@@ -53,18 +53,25 @@ function uft_blocks_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'sitewide_blocks';
-  $context->description = 'Blocks to display on all pages.';
+  $context->description = 'Blocks to display on all pages except timetable.';
   $context->tag = 'blocks';
   $context->conditions = array(
-    'sitewide' => array(
+    'path' => array(
       'values' => array(
-        1 => 1,
+        '*' => '*',
+        '~timetable*' => '~timetable*',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu-menu-important-links' => array(
+          'module' => 'menu',
+          'delta' => 'menu-important-links',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
@@ -78,7 +85,7 @@ function uft_blocks_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Blocks to display on all pages.');
+  t('Blocks to display on all pages except timetable.');
   t('blocks');
   $export['sitewide_blocks'] = $context;
 

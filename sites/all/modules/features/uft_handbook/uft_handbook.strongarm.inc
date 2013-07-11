@@ -54,7 +54,7 @@ function uft_handbook_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_book_pattern';
-  $strongarm->value = 'handbook/[node:title]';
+  $strongarm->value = 'information/[node:title]';
   $export['pathauto_node_book_pattern'] = $strongarm;
 
   return $export;
