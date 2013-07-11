@@ -54,10 +54,14 @@ function uft_staff_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'A' => 'Philosophy',
+        'B' => 'Biblical Studies',
+        'C' => 'Christian Thought and History',
+        'D' => 'Moral and Practical Theology',
+        'Philosophy' => 'Philosophy',
         'Biblical Studies' => 'Biblical Studies',
         'Christian Thought and History' => 'Christian Thought and History',
         'Moral and Practical Theology' => 'Moral and Practical Theology',
-        'Philosophy' => 'Philosophy',
       ),
       'allowed_values_function' => '',
     ),
