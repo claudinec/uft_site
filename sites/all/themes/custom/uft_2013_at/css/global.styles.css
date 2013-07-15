@@ -243,6 +243,7 @@ var {
  */
 #logo {
   padding: 10px 0;
+  text-align: center;
 }
 
 #logo img {
@@ -457,6 +458,10 @@ a:focus {
 .nav {
   clear: both;
   margin: 10px 0;
+}
+
+div[id$="menu-bar"] {
+  width: 1140px;
 }
 
 .nav ul,
