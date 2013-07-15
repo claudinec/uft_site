@@ -194,7 +194,7 @@ function uft_staff_field_default_field_instances() {
     'label' => 'Postgraduate supervision',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -234,7 +234,7 @@ function uft_staff_field_default_field_instances() {
     'label' => 'Publications',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -318,7 +318,7 @@ function uft_staff_field_default_field_instances() {
     'label' => 'Research interests',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -434,7 +434,7 @@ function uft_staff_field_default_field_instances() {
     'label' => 'Teaching interests',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

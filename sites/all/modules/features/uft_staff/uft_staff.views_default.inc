@@ -128,6 +128,11 @@ function uft_staff_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'staff_profile' => 'staff_profile',
   );
+  /* Filter criterion: Content: Staff type (field_staff_type) */
+  $handler->display->display_options['filters']['field_staff_type_value']['id'] = 'field_staff_type_value';
+  $handler->display->display_options['filters']['field_staff_type_value']['table'] = 'field_data_field_staff_type';
+  $handler->display->display_options['filters']['field_staff_type_value']['field'] = 'field_staff_type_value';
+  $handler->display->display_options['filters']['field_staff_type_value']['operator'] = 'not empty';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
