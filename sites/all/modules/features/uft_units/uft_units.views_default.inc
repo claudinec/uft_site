@@ -156,6 +156,26 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
+  /* Field: Content: Class location */
+  $handler->display->display_options['fields']['field_class_location']['id'] = 'field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['table'] = 'field_data_field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['field'] = 'field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['label'] = 'Location';
+  $handler->display->display_options['fields']['field_class_location']['hide_empty'] = TRUE;
+  /* Field: Content: Undergraduate Level */
+  $handler->display->display_options['fields']['field_undergraduate_level']['id'] = 'field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['table'] = 'field_data_field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['field'] = 'field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_undergraduate_level']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Postgraduate Level */
+  $handler->display->display_options['fields']['field_postgraduate_level']['id'] = 'field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['table'] = 'field_data_field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['field'] = 'field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['hide_empty'] = TRUE;
   /* Field: Content: MDiv Type of Study */
   $handler->display->display_options['fields']['field_mdiv_type_of_study']['id'] = 'field_mdiv_type_of_study';
   $handler->display->display_options['fields']['field_mdiv_type_of_study']['table'] = 'field_data_field_mdiv_type_of_study';
