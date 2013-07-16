@@ -49,6 +49,10 @@ function uft_units_views_default_views() {
     'title' => 'title',
     'field_courses' => 'field_courses',
     'field_mode_of_teaching' => 'field_mode_of_teaching',
+    'field_class_location' => 'field_class_location',
+    'field_undergraduate_level' => 'field_undergraduate_level',
+    'field_postgraduate_level' => 'field_postgraduate_level',
+    'field_mdiv_type_of_study' => 'field_mdiv_type_of_study',
     'field_years_offered' => 'field_years_offered',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
@@ -97,6 +101,32 @@ function uft_units_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'field_class_location' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_undergraduate_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_postgraduate_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_mdiv_type_of_study' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
     'field_years_offered' => array(
       'align' => '',
@@ -156,6 +186,30 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_class_location']['id'] = 'field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['table'] = 'field_data_field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['field'] = 'field_class_location';
+  $handler->display->display_options['fields']['field_class_location']['hide_empty'] = TRUE;
+  /* Field: Content: Undergraduate Level */
+  $handler->display->display_options['fields']['field_undergraduate_level']['id'] = 'field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['table'] = 'field_data_field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['field'] = 'field_undergraduate_level';
+  $handler->display->display_options['fields']['field_undergraduate_level']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_undergraduate_level']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Postgraduate Level */
+  $handler->display->display_options['fields']['field_postgraduate_level']['id'] = 'field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['table'] = 'field_data_field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['field'] = 'field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['hide_empty'] = TRUE;
+  /* Field: Content: MDiv Type of Study */
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['id'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['table'] = 'field_data_field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['field'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['hide_empty'] = TRUE;
   /* Field: Content: Years Offered */
   $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
   $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';

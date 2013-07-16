@@ -79,108 +79,113 @@ function uft_units_feeds_importer_default() {
             'unique' => FALSE,
           ),
           7 => array(
-            'source' => 'MDiv Type of Study',
-            'target' => 'field_mdiv_type_of_study',
-            'unique' => FALSE,
-          ),
-          8 => array(
             'source' => 'Mode of Teaching',
             'target' => 'field_mode_of_teaching',
             'unique' => FALSE,
           ),
-          9 => array(
+          8 => array(
             'source' => 'Pre-2013 Unit Code',
             'target' => 'field_pre_2013_unit_code',
             'unique' => FALSE,
           ),
-          10 => array(
+          9 => array(
             'source' => 'Prerequisites',
             'target' => 'field_prerequisites',
             'unique' => FALSE,
           ),
-          11 => array(
+          10 => array(
             'source' => 'Prohibited Combinations',
             'target' => 'field_prohibited_combinations',
             'unique' => FALSE,
           ),
-          12 => array(
+          11 => array(
             'source' => 'RTI',
             'target' => 'field_rti',
             'unique' => FALSE,
           ),
-          13 => array(
+          12 => array(
             'source' => 'Teaching Methods',
             'target' => 'field_teaching_methods',
             'unique' => FALSE,
           ),
-          14 => array(
+          13 => array(
             'source' => 'Undergraduate Level',
             'target' => 'field_undergraduate_level',
             'unique' => FALSE,
           ),
-          15 => array(
+          14 => array(
             'source' => 'Unit Frequency',
             'target' => 'field_unit_frequency',
             'unique' => FALSE,
           ),
-          16 => array(
+          15 => array(
             'source' => 'Department Name',
             'target' => 'field_department',
             'unique' => FALSE,
           ),
-          17 => array(
+          16 => array(
             'source' => 'Disciplines',
             'target' => 'field_unit_disciplines',
             'unique' => FALSE,
           ),
-          18 => array(
+          17 => array(
             'source' => 'Years Offered',
             'target' => 'field_years_offered',
             'unique' => FALSE,
           ),
-          19 => array(
+          18 => array(
             'source' => 'Semester',
             'target' => 'field_unit_semester',
             'unique' => FALSE,
           ),
-          20 => array(
+          19 => array(
             'source' => 'Day',
             'target' => 'field_unit_day',
             'unique' => FALSE,
           ),
-          21 => array(
+          20 => array(
             'source' => 'Notes',
             'target' => 'field_unit_timetable_notes',
             'unique' => FALSE,
           ),
-          22 => array(
+          21 => array(
             'source' => 'Lecturers',
             'target' => 'field_lecturers',
             'unique' => FALSE,
           ),
-          23 => array(
+          22 => array(
             'source' => 'Recommended reading',
             'target' => 'field_recommended_reading',
             'unique' => FALSE,
           ),
-          24 => array(
+          23 => array(
             'source' => 'Number of timetabled hours per week',
             'target' => 'field_weekly_workload_class',
             'unique' => FALSE,
           ),
-          25 => array(
+          24 => array(
             'source' => 'Expected personal study hours per week',
             'target' => 'field_weekly_workload_personal',
             'unique' => FALSE,
           ),
-          26 => array(
+          25 => array(
             'source' => 'Workload',
             'target' => 'field_unit_workload',
             'unique' => FALSE,
           ),
-          27 => array(
+          26 => array(
             'source' => 'Course Type',
             'target' => 'field_courses',
+            'unique' => FALSE,
+          ),
+          27 => array(
+            'source' => 'Location',
+            'target' => 'field_class_location',
+            'unique' => FALSE,
+          ),
+          28 => array(
+            'source' => 'MDiv Type of Study',
+            'target' => 'field_mdiv_type_of_study',
             'unique' => FALSE,
           ),
         ),

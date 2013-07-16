@@ -10,6 +10,38 @@
 function uft_units_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_class_location'
+  $field_bases['field_class_location'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_class_location',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'CTM' => 'Centre for Theology and Ministry',
+        'ICSPF' => 'Institute for Christian Spirituality and Pastoral Formation',
+        'JTC' => 'Jesuit Theological College',
+        'NN' => 'New Norcia',
+        'TCTS' => 'Trinity College Theological School',
+        'UM' => 'University of Melbourne',
+        'WHT' => 'Whitley College',
+        'YTU' => 'Yarra Theological Union',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_corequisites'
   $field_bases['field_corequisites'] = array(
     'active' => 1,
@@ -161,7 +193,7 @@ function uft_units_field_default_field_bases() {
   // Exported field_base: 'field_mdiv_type_of_study'
   $field_bases['field_mdiv_type_of_study'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 2,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_mdiv_type_of_study',
