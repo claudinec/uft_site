@@ -37,7 +37,7 @@ function uft_units_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_class_location',
-    'label' => 'Class location',
+    'label' => 'Location',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1048,7 +1048,7 @@ function uft_units_field_default_field_instances() {
     'label' => 'Unit Timetable Notes',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1317,7 +1317,6 @@ function uft_units_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Class location');
   t('Courses');
   t('Department');
   t('Discipline ID');
@@ -1325,6 +1324,7 @@ function uft_units_field_default_field_instances() {
   t('File attachments');
   t('Learning Outcomes');
   t('Lecturers');
+  t('Location');
   t('MDiv Type of Study');
   t('Mode of Teaching');
   t('Number of timetabled hours per week.');

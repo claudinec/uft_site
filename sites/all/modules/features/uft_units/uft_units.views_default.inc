@@ -49,6 +49,10 @@ function uft_units_views_default_views() {
     'title' => 'title',
     'field_courses' => 'field_courses',
     'field_mode_of_teaching' => 'field_mode_of_teaching',
+    'field_class_location' => 'field_class_location',
+    'field_undergraduate_level' => 'field_undergraduate_level',
+    'field_postgraduate_level' => 'field_postgraduate_level',
+    'field_mdiv_type_of_study' => 'field_mdiv_type_of_study',
     'field_years_offered' => 'field_years_offered',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
@@ -97,6 +101,32 @@ function uft_units_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'field_class_location' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_undergraduate_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_postgraduate_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_mdiv_type_of_study' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
     'field_years_offered' => array(
       'align' => '',
@@ -156,11 +186,10 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
-  /* Field: Content: Class location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_class_location']['id'] = 'field_class_location';
   $handler->display->display_options['fields']['field_class_location']['table'] = 'field_data_field_class_location';
   $handler->display->display_options['fields']['field_class_location']['field'] = 'field_class_location';
-  $handler->display->display_options['fields']['field_class_location']['label'] = 'Location';
   $handler->display->display_options['fields']['field_class_location']['hide_empty'] = TRUE;
   /* Field: Content: Undergraduate Level */
   $handler->display->display_options['fields']['field_undergraduate_level']['id'] = 'field_undergraduate_level';
