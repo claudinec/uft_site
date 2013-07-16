@@ -156,6 +156,11 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
+  /* Field: Content: MDiv Type of Study */
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['id'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['table'] = 'field_data_field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['field'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['hide_empty'] = TRUE;
   /* Field: Content: Years Offered */
   $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
   $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';
