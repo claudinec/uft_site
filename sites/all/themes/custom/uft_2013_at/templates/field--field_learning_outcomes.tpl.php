@@ -88,7 +88,7 @@
   <p>Upon successful completion of this unit, it is expected that students will be able to:</p>
     <?php foreach ($items as $delta => $item) : ?>
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
-        <li><?php print render($item); ?>
+        <?php print render($item); ?>
       </div>
     <?php endforeach; ?>
   </div>
