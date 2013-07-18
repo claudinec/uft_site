@@ -149,43 +149,43 @@ function uft_units_feeds_importer_default() {
             'unique' => FALSE,
           ),
           21 => array(
-            'source' => 'Lecturers',
-            'target' => 'field_lecturers',
-            'unique' => FALSE,
-          ),
-          22 => array(
             'source' => 'Recommended reading',
             'target' => 'field_recommended_reading',
             'unique' => FALSE,
           ),
-          23 => array(
+          22 => array(
             'source' => 'Number of timetabled hours per week',
             'target' => 'field_weekly_workload_class',
             'unique' => FALSE,
           ),
-          24 => array(
+          23 => array(
             'source' => 'Expected personal study hours per week',
             'target' => 'field_weekly_workload_personal',
             'unique' => FALSE,
           ),
-          25 => array(
+          24 => array(
             'source' => 'Workload',
             'target' => 'field_unit_workload',
             'unique' => FALSE,
           ),
-          26 => array(
+          25 => array(
             'source' => 'Course Type',
             'target' => 'field_courses',
             'unique' => FALSE,
           ),
-          27 => array(
+          26 => array(
             'source' => 'Location',
             'target' => 'field_class_location',
             'unique' => FALSE,
           ),
-          28 => array(
+          27 => array(
             'source' => 'MDiv Type of Study',
             'target' => 'field_mdiv_type_of_study',
+            'unique' => FALSE,
+          ),
+          28 => array(
+            'source' => 'Lecturer/s',
+            'target' => 'field_lecturers',
             'unique' => FALSE,
           ),
         ),

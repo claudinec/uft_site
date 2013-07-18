@@ -1267,7 +1267,7 @@ function uft_units_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'max' => 2020,
-      'min' => 2012,
+      'min' => 2010,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
