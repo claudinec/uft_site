@@ -86,13 +86,11 @@
 
   <div class="field-items"<?php print $content_attributes; ?>>
   <p>* = set texts recommended for purchase</p>
-  <ul>
     <?php foreach ($items as $delta => $item) : ?>
       <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
         <li><?php print render($item); ?>
       </div>
     <?php endforeach; ?>
-  </ul>
   </div>
 
 </<?php print $tag; ?>>
