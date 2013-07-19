@@ -39,13 +39,6 @@ function mailchimp_activity_schema() {
         'not null' => TRUE,
         'default' => '',
       ),
-      'entity_path' => array(
-        'description' => 'The path to view individual entities of the selected type.',
-        'type' => 'varchar',
-        'length' => 128,
-        'not null' => TRUE,
-        'default' => '',
-      ),
       'email_property' => array(
         'description' => 'The property that contains the email address to track',
         'type' => 'varchar',
@@ -96,6 +89,7 @@ function mailchimp_activity_schema() {
 
   return $schema;
 }
+<<<<<<< HEAD
 
 /**
  * Create the entity path field in mailchimp activity entities.
@@ -108,3 +102,5 @@ function mailchimp_activity_update_7000() {
   $spec = $schema[$table_name]['fields'][$field_name];
   db_add_field($table_name, $field_name, $spec);
 }
+=======
+>>>>>>> update mailchimp module
