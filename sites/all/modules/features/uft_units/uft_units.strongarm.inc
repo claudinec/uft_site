@@ -13,6 +13,13 @@ function uft_units_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_unit';
+  $strongarm->value = '';
+  $export['ant_pattern_unit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__unit';
   $strongarm->value = array(
     'view_modes' => array(
@@ -50,7 +57,7 @@ function uft_units_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '31',
         ),
       ),
       'display' => array(),
