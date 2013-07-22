@@ -7,3 +7,7 @@ sites/*/private
 
 # Local symlink to ignore
 sites/all/modules/views
+
+# OS X
+.DS_Store
+
