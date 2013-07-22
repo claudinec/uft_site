@@ -25,7 +25,7 @@ function uft_text_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'filter_markdown' => array(
+      'mailchimp_campaign' => array(
         'weight' => 0,
         'status' => 1,
         'settings' => array(),
