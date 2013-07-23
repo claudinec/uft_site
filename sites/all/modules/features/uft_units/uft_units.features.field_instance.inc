@@ -10,6 +10,50 @@
 function uft_units_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-unit-field_assessment'
+  $field_instances['node-unit-field_assessment'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection_table',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => 1,
+          'edit' => 'Edit',
+          'empty' => 1,
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_table_view',
+        'weight' => 30,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_assessment',
+    'label' => 'Assessment',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-unit-field_class_location'
   $field_instances['node-unit-field_class_location'] = array(
     'bundle' => 'unit',
@@ -143,7 +187,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1118,7 +1162,7 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_unit_semester',
     'label' => 'Unit Semester',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1534,6 +1578,7 @@ function uft_units_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Assessment');
   t('Corequisites');
   t('Courses');
   t('Department');

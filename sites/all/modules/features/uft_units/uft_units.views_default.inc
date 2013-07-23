@@ -435,13 +435,6 @@ function uft_units_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
-    'action::revisioning_delete_archived_action' => array(
-      'selected' => 0,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
     'action::views_bulk_operations_delete_item' => array(
       'selected' => 0,
       'postpone_processing' => 0,
@@ -470,6 +463,19 @@ function uft_units_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          'unit::field_rti' => 'unit::field_rti',
+        ),
+      ),
+    ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
       'skip_confirmation' => 0,
@@ -490,13 +496,6 @@ function uft_units_views_default_views() {
       'selected' => 0,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-    ),
-    'action::revisioning_publish_latest_revision_action' => array(
-      'selected' => 1,
-      'postpone_processing' => 0,
-      'skip_confirmation' => 1,
       'override_label' => 0,
       'label' => '',
     ),
@@ -606,6 +605,24 @@ function uft_units_views_default_views() {
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
+  );
+  /* Filter criterion: Content: RTI (field_rti) */
+  $handler->display->display_options['filters']['field_rti_value']['id'] = 'field_rti_value';
+  $handler->display->display_options['filters']['field_rti_value']['table'] = 'field_data_field_rti';
+  $handler->display->display_options['filters']['field_rti_value']['field'] = 'field_rti_value';
+  $handler->display->display_options['filters']['field_rti_value']['value'] = array(
+    'M' => 'M',
+  );
+  $handler->display->display_options['filters']['field_rti_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_rti_value']['expose']['operator_id'] = 'field_rti_value_op';
+  $handler->display->display_options['filters']['field_rti_value']['expose']['label'] = 'RTI (field_rti)';
+  $handler->display->display_options['filters']['field_rti_value']['expose']['operator'] = 'field_rti_value_op';
+  $handler->display->display_options['filters']['field_rti_value']['expose']['identifier'] = 'field_rti_value';
+  $handler->display->display_options['filters']['field_rti_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
   );
   $handler->display->display_options['path'] = 'timetable/check';
   $export['timetable'] = $view;
