@@ -29,7 +29,7 @@ function uft_units_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_table_view',
-        'weight' => 31,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -50,7 +50,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 33,
+      'weight' => 32,
     ),
   );
 
@@ -187,7 +187,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
