@@ -57,7 +57,7 @@ function uft_units_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '34',
+          'weight' => '32',
         ),
       ),
       'display' => array(),
