@@ -50,7 +50,7 @@ function uft_units_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '31',
+          'weight' => '32',
         ),
       ),
       'display' => array(),
