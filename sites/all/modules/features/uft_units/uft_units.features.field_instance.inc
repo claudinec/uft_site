@@ -119,7 +119,7 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_department',
     'label' => 'Department',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1444,7 +1444,7 @@ function uft_units_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'max' => 2020,
-      'min' => 2010,
+      'min' => 2009,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
