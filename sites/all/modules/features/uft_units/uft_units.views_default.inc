@@ -627,5 +627,332 @@ function uft_units_views_default_views() {
   $handler->display->display_options['path'] = 'timetable/check';
   $export['timetable'] = $view;
 
+  $view = new view();
+  $view->name = 'units_admin';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'units_admin';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'units_admin';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::nodequeue_add_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_assign_owner_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_script_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_make_sticky_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_make_unsticky_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          'unit::field_lecturer_reference' => 'unit::field_lecturer_reference',
+        ),
+      ),
+    ),
+    'action::views_bulk_operations_argument_selector_action' => array(
+      'selected' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'url' => '',
+      ),
+    ),
+    'action::node_promote_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_publish_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpromote_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::nodequeue_remove_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_save_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::system_send_email_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_by_keyword_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::pathauto_node_update_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Department */
+  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
+  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['type'] = 'list_key';
+  $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
+  /* Field: Content: Lecturers */
+  $handler->display->display_options['fields']['field_lecturers']['id'] = 'field_lecturers';
+  $handler->display->display_options['fields']['field_lecturers']['table'] = 'field_data_field_lecturers';
+  $handler->display->display_options['fields']['field_lecturers']['field'] = 'field_lecturers';
+  $handler->display->display_options['fields']['field_lecturers']['delta_offset'] = '0';
+  /* Field: Content: Lecturer */
+  $handler->display->display_options['fields']['field_lecturer_reference']['id'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['table'] = 'field_data_field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['field'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['label'] = 'Lecturer reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_lecturer_reference']['delta_offset'] = '0';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'unit' => 'unit',
+  );
+  /* Filter criterion: Content: Department (field_department) */
+  $handler->display->display_options['filters']['field_department_value']['id'] = 'field_department_value';
+  $handler->display->display_options['filters']['field_department_value']['table'] = 'field_data_field_department';
+  $handler->display->display_options['filters']['field_department_value']['field'] = 'field_department_value';
+  $handler->display->display_options['filters']['field_department_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_department_value']['expose']['operator_id'] = 'field_department_value_op';
+  $handler->display->display_options['filters']['field_department_value']['expose']['label'] = 'Department (field_department)';
+  $handler->display->display_options['filters']['field_department_value']['expose']['operator'] = 'field_department_value_op';
+  $handler->display->display_options['filters']['field_department_value']['expose']['identifier'] = 'field_department_value';
+  $handler->display->display_options['filters']['field_department_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Years Offered (field_years_offered) */
+  $handler->display->display_options['filters']['field_years_offered_value']['id'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['filters']['field_years_offered_value']['field'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2013';
+  $handler->display->display_options['filters']['field_years_offered_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator_id'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['label'] = 'Years Offered (field_years_offered)';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator'] = 'field_years_offered_value_op';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['identifier'] = 'field_years_offered_value';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'units-admin';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Units - admin';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'devel';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $export['units_admin'] = $view;
+
+  $view = new view();
+  $view->name = 'units_by_staff';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Units by staff';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Units taught';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  /* Field: Content: Unit Code */
+  $handler->display->display_options['fields']['field_unit_code']['id'] = 'field_unit_code';
+  $handler->display->display_options['fields']['field_unit_code']['table'] = 'field_data_field_unit_code';
+  $handler->display->display_options['fields']['field_unit_code']['field'] = 'field_unit_code';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Unit Title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Years Offered */
+  $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['field'] = 'field_years_offered';
+  $handler->display->display_options['fields']['field_years_offered']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_years_offered']['delta_offset'] = '0';
+  /* Field: Content: Lecturer */
+  $handler->display->display_options['fields']['field_lecturer_reference']['id'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['table'] = 'field_data_field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['field'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_lecturer_reference']['delta_offset'] = '0';
+  /* Sort criterion: Content: Unit Code (field_unit_code) */
+  $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
+  $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
+  $handler->display->display_options['sorts']['field_unit_code_value']['field'] = 'field_unit_code_value';
+  /* Contextual filter: Content: Lecturer (field_lecturer_reference) */
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['id'] = 'field_lecturer_reference_target_id';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['table'] = 'field_data_field_lecturer_reference';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['field'] = 'field_lecturer_reference_target_id';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_lecturer_reference_target_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'unit' => 'unit',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['units_by_staff'] = $view;
+
   return $export;
 }
