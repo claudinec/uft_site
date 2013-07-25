@@ -13,7 +13,9 @@ function uft_units_user_default_permissions() {
   // Exported permission: create unit content.
   $permissions['create unit content'] = array(
     'name' => 'create unit content',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
     'module' => 'node',
   );
 
