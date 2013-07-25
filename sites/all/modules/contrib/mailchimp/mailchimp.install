@@ -91,4 +91,3 @@ function mailchimp_update_7201() {
   variable_del('mailchimp_unsubscribe_page_description');
   variable_del('mailchimp_unsubscribe_page_title');
 }
-
