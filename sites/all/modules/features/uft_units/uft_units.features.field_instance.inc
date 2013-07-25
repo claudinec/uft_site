@@ -98,7 +98,7 @@ function uft_units_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_widgets_allowvals',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -135,7 +135,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -172,7 +172,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -233,7 +233,7 @@ function uft_units_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -375,7 +375,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -416,7 +416,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -453,7 +453,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -617,7 +617,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -679,7 +679,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -720,7 +720,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 27,
+      'weight' => 28,
     ),
   );
 
@@ -782,7 +782,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 28,
+      'weight' => 29,
     ),
   );
 
@@ -828,7 +828,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -1007,7 +1007,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -1053,7 +1053,7 @@ function uft_units_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_widgets_flddata',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1090,7 +1090,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -1131,7 +1131,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -1168,7 +1168,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -1232,7 +1232,7 @@ function uft_units_field_default_field_instances() {
         'label_position' => 'above',
       ),
       'type' => 'timefield_standard',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -1294,7 +1294,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -1397,7 +1397,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 32,
     ),
   );
 
@@ -1443,7 +1443,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 29,
+      'weight' => 30,
     ),
   );
 
@@ -1489,7 +1489,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 30,
+      'weight' => 31,
     ),
   );
 
@@ -1535,7 +1535,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 

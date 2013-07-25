@@ -797,11 +797,6 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
   $handler->display->display_options['fields']['field_department']['type'] = 'list_key';
   $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
-  /* Field: : field_lecturers */
-  $handler->display->display_options['fields']['field_lecturers']['id'] = 'field_lecturers';
-  $handler->display->display_options['fields']['field_lecturers']['table'] = 'field_data_field_lecturers';
-  $handler->display->display_options['fields']['field_lecturers']['field'] = 'field_lecturers';
-  $handler->display->display_options['fields']['field_lecturers']['delta_offset'] = '0';
   /* Field: Content: Lecturer */
   $handler->display->display_options['fields']['field_lecturer_reference']['id'] = 'field_lecturer_reference';
   $handler->display->display_options['fields']['field_lecturer_reference']['table'] = 'field_data_field_lecturer_reference';
