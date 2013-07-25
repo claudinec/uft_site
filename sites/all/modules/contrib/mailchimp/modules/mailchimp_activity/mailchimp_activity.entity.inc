@@ -8,7 +8,6 @@ class MailchimpActivityEntity extends Entity {
     $entity_type,
     $bundle,
     $email_property,
-    $entity_path,
     $enabled;
 
   public function __construct(array $values = array()) {

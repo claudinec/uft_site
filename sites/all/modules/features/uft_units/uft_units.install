@@ -54,57 +54,6 @@ function uft_units_update_7105() {
 }
 
 /**
- * Update unit feature.
- */
-function uft_units_update_7106() {
-  // field_delete_field('field_lecturer');
-  // field_delete_field('field_location');
-  // field_delete_field('field_timetable_notes');
-  // field_delete_field('field_timetable_time');
-  // field_delete_field('field_timetable_year');
-  _uft_units_flush_revert();
-}
-
-/**
- * Update unit feature.
- */
-function uft_units_update_7107() {
-  // field_collection_delete_field('field_timetable');
-  _uft_units_flush_revert();
-}
-
-/**
- * Update unit feature.
- */
-function uft_units_update_7108() {
-  field_collection_delete_field('field_corequisites');
-  _uft_units_flush_revert();
-}
-
-/**
- * Update unit feature.
- */
-// function uft_units_update_7109() {
-  // _uft_units_flush_revert();
-// }
-
-/**
- * Update units feature: delete field_corequisites.
- */
-function uft_units_update_7110() {
-  // field_delete_field('field_corequisites');
-  _uft_units_flush_revert();
-}
-
-/**
- * Update units feature: delete field_corequisites.
- */
-function uft_units_update_7111() {
-  field_delete_field('field_corequisites');
-  _uft_units_flush_revert();
-}
-
-/**
  * Helper function: flush caches and revert features.
  */
 function _uft_units_flush_revert() {
