@@ -46,7 +46,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -62,7 +62,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -86,7 +86,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -1,
+      'weight' => 5,
     ),
   );
 
@@ -102,7 +102,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -126,7 +126,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 9,
     ),
   );
 
@@ -163,7 +163,7 @@ function uft_courses_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
@@ -179,7 +179,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -203,7 +203,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
@@ -219,7 +219,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -243,7 +243,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
@@ -258,7 +258,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -304,7 +304,7 @@ function uft_courses_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -320,7 +320,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,7 +344,61 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-course-field_mcd_url'
+  $field_instances['node-course-field_mcd_url'] = array(
+    'bundle' => 'course',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_mcd_url',
+    'label' => 'MCD URL',
+    'required' => 1,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_maxlength' => 128,
+      'title_value' => 'Course information on MCD University of Divinity website',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
     ),
   );
 
@@ -360,7 +414,7 @@ function uft_courses_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -384,7 +438,7 @@ function uft_courses_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 8,
     ),
   );
 
@@ -399,6 +453,7 @@ function uft_courses_field_default_field_instances() {
   t('File attachments');
   t('Graduate Outcomes');
   t('Is this course undergraduate or postgraduate, coursework or research?');
+  t('MCD URL');
   t('Modes of Study');
 
   return $field_instances;
