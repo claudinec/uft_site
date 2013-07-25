@@ -325,7 +325,7 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_lecturer_reference',
     'label' => 'Lecturer',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -339,52 +339,6 @@ function uft_units_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-unit-field_lecturers'
-  $field_instances['node-unit-field_lecturers'] = array(
-    'bundle' => 'unit',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_lecturers',
-    'label' => 'Lecturers',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'autocomplete_widgets',
-      'settings' => array(
-        'autocomplete_case' => 1,
-        'autocomplete_match' => 'contains',
-        'autocomplete_xss' => 0,
-        'i18n_flddata' => 0,
-        'obey_access_controls' => 1,
-        'order' => 'ASC',
-        'size' => 60,
-      ),
-      'type' => 'autocomplete_widgets_flddata',
-      'weight' => 7,
     ),
   );
 
@@ -1630,7 +1584,6 @@ function uft_units_field_default_field_instances() {
   t('File attachments');
   t('Learning Outcomes');
   t('Lecturer');
-  t('Lecturers');
   t('Location');
   t('MDiv Type of Study');
   t('Mode of Teaching');

@@ -100,7 +100,6 @@ features[field_instance][] = node-unit-field_department
 features[field_instance][] = node-unit-field_file_attachments
 features[field_instance][] = node-unit-field_learning_outcomes
 features[field_instance][] = node-unit-field_lecturer_reference
-features[field_instance][] = node-unit-field_lecturers
 features[field_instance][] = node-unit-field_mdiv_type_of_study
 features[field_instance][] = node-unit-field_mode_of_teaching
 features[field_instance][] = node-unit-field_postgraduate_level
