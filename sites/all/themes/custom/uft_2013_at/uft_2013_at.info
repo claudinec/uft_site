@@ -7,7 +7,7 @@
   base theme  = adaptivetheme
   release     = 7.x-3.x
   engine      = phptemplate
-  screenshot  = screenshot.png
+  screenshot  = screenshot.jpg
 
 
 ;----------// Stylesheets
