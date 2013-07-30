@@ -10,6 +10,50 @@
 function uft_units_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-unit-field_assessment'
+  $field_instances['node-unit-field_assessment'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection_table',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => 1,
+          'edit' => 'Edit',
+          'empty' => 1,
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_table_view',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_assessment',
+    'label' => 'Assessment',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'node-unit-field_class_location'
   $field_instances['node-unit-field_class_location'] = array(
     'bundle' => 'unit',
@@ -26,7 +70,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -54,7 +98,7 @@ function uft_units_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_widgets_allowvals',
-      'weight' => 25,
+      'weight' => 27,
     ),
   );
 
@@ -91,7 +135,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -119,7 +163,7 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_department',
     'label' => 'Department',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -128,7 +172,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 15,
     ),
   );
 
@@ -143,7 +187,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 29,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -189,7 +233,7 @@ function uft_units_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 20,
+      'weight' => 22,
     ),
   );
 
@@ -219,6 +263,28 @@ function uft_units_field_default_field_instances() {
     'label' => 'Learning Outcomes',
     'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -233,8 +299,8 @@ function uft_units_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-unit-field_lecturers'
-  $field_instances['node-unit-field_lecturers'] = array(
+  // Exported field_instance: 'node-unit-field_lecturer_reference'
+  $field_instances['node-unit-field_lecturer_reference'] = array(
     'bundle' => 'unit',
     'default_value' => NULL,
     'deleted' => 0,
@@ -242,9 +308,11 @@ function uft_units_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -255,26 +323,21 @@ function uft_units_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_lecturers',
-    'label' => 'Lecturers',
+    'field_name' => 'field_lecturer_reference',
+    'label' => 'Lecturer',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'autocomplete_widgets',
+      'module' => 'entityreference',
       'settings' => array(
-        'autocomplete_case' => 1,
-        'autocomplete_match' => 'contains',
-        'autocomplete_xss' => 0,
-        'i18n_flddata' => 0,
-        'obey_access_controls' => 1,
-        'order' => 'ASC',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
         'size' => 60,
       ),
-      'type' => 'autocomplete_widgets_flddata',
+      'type' => 'entityreference_autocomplete',
       'weight' => 6,
     ),
   );
@@ -291,7 +354,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -312,7 +375,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 19,
     ),
   );
 
@@ -332,7 +395,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -353,7 +416,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -369,7 +432,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -390,7 +453,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 18,
     ),
   );
 
@@ -446,7 +509,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -460,47 +523,29 @@ function uft_units_field_default_field_instances() {
     'label' => 'Prerequisites',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
       ),
-      'type' => 'text_textarea',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-unit-field_prohibited_combinations'
-  $field_instances['node-unit-field_prohibited_combinations'] = array(
-    'bundle' => 'unit',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_prohibited_combinations',
-    'label' => 'Prohibited Combinations',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -514,8 +559,8 @@ function uft_units_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-unit-field_recommended_reading'
-  $field_instances['node-unit-field_recommended_reading'] = array(
+  // Exported field_instance: 'node-unit-field_prohibited_combinations'
+  $field_instances['node-unit-field_prohibited_combinations'] = array(
     'bundle' => 'unit',
     'default_value' => NULL,
     'deleted' => 0,
@@ -536,10 +581,32 @@ function uft_units_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_recommended_reading',
-    'label' => 'Recommended Reading',
+    'field_name' => 'field_prohibited_combinations',
+    'label' => 'Prohibited Combinations',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -550,7 +617,69 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 18,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_recommended_reading'
+  $field_instances['node-unit-field_recommended_reading'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_recommended_reading',
+    'label' => 'Recommended Reading',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 20,
     ),
   );
 
@@ -570,7 +699,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -591,7 +720,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 26,
+      'weight' => 28,
     ),
   );
 
@@ -607,7 +736,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -619,18 +748,41 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_teaching_methods',
     'label' => 'Teaching Methods',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 29,
     ),
   );
 
@@ -651,7 +803,7 @@ function uft_units_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -676,7 +828,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 15,
+      'weight' => 17,
     ),
   );
 
@@ -746,6 +898,28 @@ function uft_units_field_default_field_instances() {
     'label' => 'Unit Content',
     'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -757,6 +931,46 @@ function uft_units_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-unit-field_unit_corequisites'
+  $field_instances['node-unit-field_unit_corequisites'] = array(
+    'bundle' => 'unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_unit_corequisites',
+    'label' => 'Corequisites',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
     ),
   );
 
@@ -772,7 +986,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -793,7 +1007,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 22,
+      'weight' => 24,
     ),
   );
 
@@ -839,7 +1053,7 @@ function uft_units_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_widgets_flddata',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -855,7 +1069,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -876,7 +1090,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -896,7 +1110,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -917,7 +1131,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -933,7 +1147,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -945,7 +1159,7 @@ function uft_units_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_unit_semester',
     'label' => 'Unit Semester',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -954,7 +1168,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 23,
     ),
   );
 
@@ -978,7 +1192,7 @@ function uft_units_field_default_field_instances() {
           ),
         ),
         'type' => 'timefield_default',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1018,7 +1232,7 @@ function uft_units_field_default_field_instances() {
         'label_position' => 'above',
       ),
       'type' => 'timefield_standard',
-      'weight' => 23,
+      'weight' => 25,
     ),
   );
 
@@ -1034,7 +1248,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1048,6 +1262,28 @@ function uft_units_field_default_field_instances() {
     'label' => 'Unit Timetable Notes',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1058,7 +1294,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 26,
     ),
   );
 
@@ -1115,7 +1351,7 @@ function uft_units_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1129,7 +1365,29 @@ function uft_units_field_default_field_instances() {
     'label' => 'Unit workload',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'html' => 'html',
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1139,7 +1397,7 @@ function uft_units_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 30,
+      'weight' => 32,
     ),
   );
 
@@ -1160,7 +1418,7 @@ function uft_units_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 26,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1185,7 +1443,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 28,
+      'weight' => 30,
     ),
   );
 
@@ -1206,7 +1464,7 @@ function uft_units_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 27,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1231,7 +1489,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 29,
+      'weight' => 31,
     ),
   );
 
@@ -1252,7 +1510,7 @@ function uft_units_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1267,7 +1525,7 @@ function uft_units_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'max' => 2020,
-      'min' => 2010,
+      'min' => 2009,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -1277,7 +1535,7 @@ function uft_units_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 19,
+      'weight' => 21,
     ),
   );
 
@@ -1317,13 +1575,15 @@ function uft_units_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Assessment');
+  t('Corequisites');
   t('Courses');
   t('Department');
   t('Discipline ID');
   t('Expected personal study hours per week.');
   t('File attachments');
   t('Learning Outcomes');
-  t('Lecturers');
+  t('Lecturer');
   t('Location');
   t('MDiv Type of Study');
   t('Mode of Teaching');
