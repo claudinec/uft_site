@@ -1,14 +1,24 @@
 <?php
 /**
  * @file
- * Code for the UFT Staff feature.
+ * Code for the UFT Staff feature and custom functions.
  */
 
 include_once 'uft_staff.features.inc';
 
 /**
- * Implements hook_uninstall().
+ * Redirect staff link to staff search.
  */
-function uft_staff_uninstall() {
+function uft_staff_search() {
+
 }
 
+/**
+ * Display units taught by staff member.
+ *
+ * @param str $alias
+ *   Alias for the staff member that appears after staff/... (set by pathauto).
+ */
+function uft_staff_units($alias) {
+
+}

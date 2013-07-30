@@ -26,12 +26,6 @@ function uft_blocks_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-indigenous_statement_box' => array(
-          'module' => 'boxes',
-          'delta' => 'indigenous_statement_box',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
         'boxes-welcome' => array(
           'module' => 'boxes',
           'delta' => 'welcome',

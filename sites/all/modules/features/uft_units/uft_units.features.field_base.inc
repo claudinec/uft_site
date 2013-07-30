@@ -10,6 +10,25 @@
 function uft_units_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_assessment'
+  $field_bases['field_assessment'] = array(
+    'active' => 1,
+    'cardinality' => 6,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_assessment',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_class_location'
   $field_bases['field_class_location'] = array(
     'active' => 1,
@@ -225,6 +244,49 @@ function uft_units_field_default_field_bases() {
           'args' => array(),
           'display_name' => 'entityreference_1',
           'view_name' => 'staff',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_lecturer_reference'
+  $field_bases['field_lecturer_reference'] = array(
+    'active' => 1,
+    'cardinality' => 4,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_lecturer_reference',
+    'foreign keys' => array(
+      'node' => array(
+        'columns' => array(
+          'target_id' => 'nid',
+        ),
+        'table' => 'node',
+      ),
+    ),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'staff_profile' => 'staff_profile',
         ),
       ),
       'target_type' => 'node',
@@ -501,8 +563,8 @@ function uft_units_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'M' => 'MCD University of Divinity',
-        'U' => 'UFT',
-        'W' => 'Whitley',
+        'U' => 'United Faculty of Theology',
+        'W' => 'Whitley College',
         'Y' => 'Yarra Theological Union',
       ),
       'allowed_values_function' => '',
@@ -681,6 +743,33 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_unit_content',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_unit_corequisites'
+  $field_bases['field_unit_corequisites'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_unit_corequisites',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -943,6 +1032,47 @@ function uft_units_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_user_account_reference'
+  $field_bases['field_user_account_reference'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_user_account_reference',
+    'foreign keys' => array(
+      'users' => array(
+        'columns' => array(
+          'target_id' => 'uid',
+        ),
+        'table' => 'users',
+      ),
+    ),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(),
+      ),
+      'target_type' => 'user',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_weekly_workload_class'
