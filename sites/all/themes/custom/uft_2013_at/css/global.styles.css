@@ -49,6 +49,10 @@ h1 {
   color: #900020; /* burgundy */
 }
 
+h1 a {
+  color: #900020; /* burgundy */
+}
+
 h2 {
   color: #900020; /* burgundy */
 }
@@ -439,10 +443,16 @@ a {
 }
 
 a:link,
-a:visited {}
+a:visited {
+}
+
+a:link,
+a:visited {
+}
 
 a:active,
-a.active {}
+a.active {
+}
 
 a:hover,
 a:focus {
