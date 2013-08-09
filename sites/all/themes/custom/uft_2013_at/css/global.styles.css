@@ -386,7 +386,10 @@ ul.links li {
 /*
  * Header region, embedded in the #header
  */
-.region-header {}
+.region-header {
+  max-height: 240px;
+  max-width: 1140px;
+}
 
 /*
  * Generally used to output Drupals help block, if the help module is enabled
