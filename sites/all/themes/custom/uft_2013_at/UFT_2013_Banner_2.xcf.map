@@ -1,0 +1,14 @@
+<img class="jq_maphilight" src="UFT_2013_Banner_2.jpg" style="text-align: center" width="1016" height="231" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Claudine Chionh -->
+<area shape="rect" coords="1,2,123,54" alt="MCD University of Divinity" href="http://www.mcd.edu.au/" />
+<area shape="poly" coords="431,3,488,224,1,223,3,58,127,58,126,2,128,2,126,0,132,0,134,0" alt="United Faculty of Theology" href="http://uft.edu.au/" />
+<area shape="poly" coords="662,1,634,225,496,221,437,1" alt="Jesuit Theological College" href="http://jtc.edu.au/" />
+<area shape="poly" coords="840,3,813,223,643,222,666,3" alt="Uniting Church Theological College" href="http://ctm.uca.edu.au/theologicalcollege/" />
+<area shape="poly" coords="1013,1,1014,224,820,223,844,3" alt="Trinity College Theological School" href="http://www.trinity.unimelb.edu.au/learning/theological-school.html" />
+</map>
