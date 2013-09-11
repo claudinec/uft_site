@@ -22,13 +22,12 @@ function uft_blocks_default_box() {
       'value' => '<img src="/sites/all/themes/custom/uft_2013_at/logo.jpg" width="1016" height="231" border="0" usemap="#map" />
 
 <map name="map">
-<area shape="rect" coords="1,2,123,54" alt="MCD University of Divinity" href="http://www.mcd.edu.au/" />
-<area shape="poly" coords="431,3,488,224,1,223,3,58,127,58,126,2,128,2,126,0,132,0,134,0" alt="United Faculty of Theology" href="http://uft.edu.au/" />
-<area shape="poly" coords="662,1,634,225,496,221,437,1" alt="Jesuit Theological College" href="http://jtc.edu.au/" />
-<area shape="poly" coords="840,3,813,223,643,222,666,3" alt="Uniting Church Theological College" href="http://ctm.uca.edu.au/theologicalcollege/" />
-<area shape="poly" coords="1013,1,1014,224,820,223,844,3" alt="Trinity College Theological School" href="http://www.trinity.unimelb.edu.au/learning/theological-school.html" />
-</map>
-',
+<area shape="rect" coords="0,0,128,54" alt="MCD University of Divinity" href="http://www.mcd.edu.au/" />
+<area shape="poly" coords="432,0,492,230,0,230,0,54,128,54,128,0,128,0,128,0,128,0,128,0" alt="United Faculty of Theology" href="http://uft.edu.au/" />
+<area shape="poly" coords="662,0,634,230,492,230,432,0" alt="Jesuit Theological College" href="http://jtc.edu.au/" />
+<area shape="poly" coords="840,0,815,230,636,230,664,0" alt="Uniting Church Theological College" href="http://ctm.uca.edu.au/theologicalcollege/" />
+<area shape="poly" coords="1015,1,1015,230,815,230,840,0" alt="Trinity College Theological School" href="http://www.trinity.unimelb.edu.au/learning/theological-school.html" />
+</map>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
