@@ -4,3 +4,15 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# Local symlink to ignore
+sites/all/modules/views
+
+# Gimp
+*.xcf
+
+# OS X and Vim
+.DS_Store
+*~
+*.swp
+
