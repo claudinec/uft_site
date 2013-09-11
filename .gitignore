@@ -8,6 +8,11 @@ sites/*/private
 # Local symlink to ignore
 sites/all/modules/views
 
-# OS X
+# Gimp
+*.xcf
+
+# OS X and Vim
 .DS_Store
+*~
+*.swp
 
