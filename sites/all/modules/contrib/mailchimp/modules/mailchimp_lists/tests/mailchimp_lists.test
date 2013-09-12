@@ -279,7 +279,7 @@ class MailchimpListsBasicTestCase extends DrupalWebTestCase {
     foreach ($saved_lists as $saved_list) {
       $test_list = $test_lists[$saved_list->name];
       $this->assertEqual($saved_list->mc_list_id, $test_list->mc_list_id, 'MC List ids was saved correctly.');
-      $this->assertEqual($saved_list->label, $test_list->label, 'Label was saved correctly.');
+      $this->assertEqual($saved_list->label(), $test_list->label, 'Label was saved correctly.');
       $this->assertEqual($saved_list->description, $test_list->description, 'MC List ids were saved correctly.');
       foreach ($saved_list->settings as $key => $value) {
         $this->assertEqual($value, $test_list->settings[$key], 'Setting ' . $key . ' matches.');
@@ -287,6 +287,10 @@ class MailchimpListsBasicTestCase extends DrupalWebTestCase {
 
       $this->assertEqual($saved_list->mc_list_id, $test_list->mc_list_id, 'MC List ids were saved correctly.');
     }
+
+    // Test list deletion.
+    mailchimp_lists_delete_multiple(array_keys($test_lists));
+    $this->assertIdentical(mailchimp_lists_load_multiple(), array(), 'Lists have been deleted.');
   }
 
   /**
@@ -410,7 +414,7 @@ class MailchimpListsBasicTestCase extends DrupalWebTestCase {
   protected function testLists() {
     $lists = array();
 
-    $list = new MailchimpList();
+    $list = mailchimp_list_create();
     $list->label = 'Anonymous Test List';
     $list->name = 'anonymous_test_list';
     $list->description = 'Anonymous list description';
@@ -427,7 +431,7 @@ class MailchimpListsBasicTestCase extends DrupalWebTestCase {
     );
     $lists[$list->name] = $list;
 
-    $list = new MailchimpList();
+    $list = mailchimp_list_create();
     $list->label = 'Optional Test List';
     $list->name = 'optional_test_list';
     $list->description = 'Optional list description';
@@ -444,7 +448,7 @@ class MailchimpListsBasicTestCase extends DrupalWebTestCase {
     );
     $lists[$list->name] = $list;
 
-    $list = new MailchimpList();
+    $list = mailchimp_list_create();
     $list->label = 'Required Test List';
     $list->name = 'required_test_list';
     $list->description = 'Required list description';
