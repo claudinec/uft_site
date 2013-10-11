@@ -54,10 +54,13 @@ function uft_units_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '34',
+          'weight' => '42',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '43',
         ),
       ),
       'display' => array(),

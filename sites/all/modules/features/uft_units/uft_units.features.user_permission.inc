@@ -10,43 +10,50 @@
 function uft_units_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create unit content.
+  // Exported permission: 'create unit content'.
   $permissions['create unit content'] = array(
     'name' => 'create unit content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete any unit content.
+  // Exported permission: 'delete any unit content'.
   $permissions['delete any unit content'] = array(
     'name' => 'delete any unit content',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
     'module' => 'node',
   );
 
-  // Exported permission: delete own unit content.
+  // Exported permission: 'delete own unit content'.
   $permissions['delete own unit content'] = array(
     'name' => 'delete own unit content',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
     'module' => 'node',
   );
 
-  // Exported permission: edit any unit content.
+  // Exported permission: 'edit any unit content'.
   $permissions['edit any unit content'] = array(
     'name' => 'edit any unit content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit own unit content.
+  // Exported permission: 'edit own unit content'.
   $permissions['edit own unit content'] = array(
     'name' => 'edit own unit content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'node',
   );

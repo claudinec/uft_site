@@ -97,7 +97,7 @@ function uft_events_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 1,
-        'increment' => 15,
+        'increment' => 5,
         'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
@@ -150,12 +150,76 @@ function uft_events_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_file_attachments'
+  $field_instances['node-event-field_file_attachments'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file_attachments',
+    'label' => 'File attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 'imce',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 35,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Date and time for this event, with an optional end date and time.');
   t('Event date');
   t('Event location');
+  t('File attachments');
 
   return $field_instances;
 }
