@@ -1,6 +1,12 @@
 HISTORY
 =======
 
+Sprint 34 (2013-10-07)
+----------------------
+
+- Update contrib modules: conditional fields, context, features
+- Add staff approval fields to unit descriptions
+
 Sprint 30 (2013-09-09)
 ----------------------
 
