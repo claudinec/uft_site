@@ -2,7 +2,6 @@ name = UFT Users
 description = Core user feature - roles and permissions
 core = 7.x
 package = UFT
-php = 5.2.4
 version = 7.x-1.0
 project = uft_users
 dependencies[] = admin_menu
