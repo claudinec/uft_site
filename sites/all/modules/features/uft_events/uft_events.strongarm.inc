@@ -24,6 +24,9 @@ function uft_events_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

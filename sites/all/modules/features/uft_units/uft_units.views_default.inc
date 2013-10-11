@@ -34,49 +34,21 @@ function uft_units_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_unit_semester',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_unit_semester' => 'field_unit_semester',
-    'field_unit_day' => 'field_unit_day',
-    'field_unit_time' => 'field_unit_time',
+    'views_bulk_operations' => 'views_bulk_operations',
     'field_unit_code' => 'field_unit_code',
     'title' => 'title',
     'field_courses' => 'field_courses',
     'field_mode_of_teaching' => 'field_mode_of_teaching',
-    'field_class_location' => 'field_class_location',
-    'field_undergraduate_level' => 'field_undergraduate_level',
     'field_postgraduate_level' => 'field_postgraduate_level',
     'field_mdiv_type_of_study' => 'field_mdiv_type_of_study',
-    'field_years_offered' => 'field_years_offered',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'field_unit_semester' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
+    'views_bulk_operations' => array(
       'align' => '',
       'separator' => '',
-      'empty_column' => 1,
-    ),
-    'field_unit_day' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 1,
-    ),
-    'field_unit_time' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 1,
+      'empty_column' => 0,
     ),
     'field_unit_code' => array(
       'sortable' => 1,
@@ -102,22 +74,8 @@ function uft_units_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_class_location' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 1,
-    ),
-    'field_undergraduate_level' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 1,
-    ),
     'field_postgraduate_level' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -128,12 +86,23 @@ function uft_units_views_default_views() {
       'separator' => '',
       'empty_column' => 1,
     ),
-    'field_years_offered' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
   );
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Use this form to search for units offered by UFT.
+
+You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT_2013_Timetable_linked_20130801.pdf">PDF version of the timetable for 2013</a></strong>.';
+  $handler->display->display_options['header']['area']['format'] = 'html';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results found for this search.
+';
+  $handler->display->display_options['empty']['area']['format'] = 'html';
   /* Field: Content: Unit Semester */
   $handler->display->display_options['fields']['field_unit_semester']['id'] = 'field_unit_semester';
   $handler->display->display_options['fields']['field_unit_semester']['table'] = 'field_data_field_unit_semester';
@@ -405,11 +374,8 @@ function uft_units_views_default_views() {
     4 => '4',
   );
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Bulk operations: Content */
@@ -472,6 +438,8 @@ function uft_units_views_default_views() {
       'settings' => array(
         'show_all_tokens' => 1,
         'display_values' => array(
+          'unit::field_mdiv_type_of_study' => 'unit::field_mdiv_type_of_study',
+          'unit::field_postgraduate_level' => 'unit::field_postgraduate_level',
           'unit::field_rti' => 'unit::field_rti',
         ),
       ),
@@ -574,6 +542,15 @@ function uft_units_views_default_views() {
   $handler->display->display_options['fields']['field_mode_of_teaching']['table'] = 'field_data_field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['field'] = 'field_mode_of_teaching';
   $handler->display->display_options['fields']['field_mode_of_teaching']['delta_limit'] = 'all';
+  /* Field: Content: Postgraduate Level */
+  $handler->display->display_options['fields']['field_postgraduate_level']['id'] = 'field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['table'] = 'field_data_field_postgraduate_level';
+  $handler->display->display_options['fields']['field_postgraduate_level']['field'] = 'field_postgraduate_level';
+  /* Field: Content: MDiv Type of Study */
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['id'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['table'] = 'field_data_field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['field'] = 'field_mdiv_type_of_study';
+  $handler->display->display_options['fields']['field_mdiv_type_of_study']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -606,19 +583,31 @@ function uft_units_views_default_views() {
     2 => '2',
     1 => 0,
   );
-  /* Filter criterion: Content: RTI (field_rti) */
-  $handler->display->display_options['filters']['field_rti_value']['id'] = 'field_rti_value';
-  $handler->display->display_options['filters']['field_rti_value']['table'] = 'field_data_field_rti';
-  $handler->display->display_options['filters']['field_rti_value']['field'] = 'field_rti_value';
-  $handler->display->display_options['filters']['field_rti_value']['value'] = array(
-    'M' => 'M',
+  /* Filter criterion: Content: Courses (field_courses) */
+  $handler->display->display_options['filters']['field_courses_value']['id'] = 'field_courses_value';
+  $handler->display->display_options['filters']['field_courses_value']['table'] = 'field_data_field_courses';
+  $handler->display->display_options['filters']['field_courses_value']['field'] = 'field_courses_value';
+  $handler->display->display_options['filters']['field_courses_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_courses_value']['expose']['operator_id'] = 'field_courses_value_op';
+  $handler->display->display_options['filters']['field_courses_value']['expose']['label'] = 'Courses';
+  $handler->display->display_options['filters']['field_courses_value']['expose']['operator'] = 'field_courses_value_op';
+  $handler->display->display_options['filters']['field_courses_value']['expose']['identifier'] = 'field_courses_value';
+  $handler->display->display_options['filters']['field_courses_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
   );
-  $handler->display->display_options['filters']['field_rti_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_rti_value']['expose']['operator_id'] = 'field_rti_value_op';
-  $handler->display->display_options['filters']['field_rti_value']['expose']['label'] = 'RTI (field_rti)';
-  $handler->display->display_options['filters']['field_rti_value']['expose']['operator'] = 'field_rti_value_op';
-  $handler->display->display_options['filters']['field_rti_value']['expose']['identifier'] = 'field_rti_value';
-  $handler->display->display_options['filters']['field_rti_value']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Postgraduate Level (field_postgraduate_level) */
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['id'] = 'field_postgraduate_level_value';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['table'] = 'field_data_field_postgraduate_level';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['field'] = 'field_postgraduate_level_value';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['expose']['operator_id'] = 'field_postgraduate_level_value_op';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['expose']['label'] = 'Postgraduate Level';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['expose']['operator'] = 'field_postgraduate_level_value_op';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['expose']['identifier'] = 'field_postgraduate_level_value';
+  $handler->display->display_options['filters']['field_postgraduate_level_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,

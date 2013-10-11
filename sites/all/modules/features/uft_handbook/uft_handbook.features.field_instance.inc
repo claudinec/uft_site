@@ -93,6 +93,7 @@ function uft_handbook_field_default_field_instances() {
           'filefield_sources' => array(
             'attach' => 0,
             'clipboard' => 0,
+            'imce' => 'imce',
             'reference' => 0,
             'remote' => 0,
             'upload' => 'upload',
@@ -103,7 +104,7 @@ function uft_handbook_field_default_field_instances() {
             'path' => 'file_attach',
           ),
           'source_imce' => array(
-            'imce_mode' => 0,
+            'imce_mode' => 1,
           ),
           'source_reference' => array(
             'autocomplete' => 0,
