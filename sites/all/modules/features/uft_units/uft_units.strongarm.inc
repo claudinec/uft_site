@@ -91,6 +91,7 @@ function uft_units_strongarm() {
   $strongarm->value = array(
     0 => 'status',
     1 => 'revision',
+    2 => 'revision_moderation',
   );
   $export['node_options_unit'] = $strongarm;
 
