@@ -1,6 +1,12 @@
 HISTORY
 =======
 
+Sprint 35 (2013-10-14)
+----------------------
+
+- Update unit descriptions: Add Revisioning to prepare for 2014 content
+  updates
+
 Sprint 34 (2013-10-07)
 ----------------------
 
