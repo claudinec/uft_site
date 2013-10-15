@@ -776,6 +776,19 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
       'label' => '',
     ),
   );
+  /* Field: Content revision: State */
+  $handler->display->display_options['fields']['state']['id'] = 'state';
+  $handler->display->display_options['fields']['state']['table'] = 'node_revision';
+  $handler->display->display_options['fields']['state']['field'] = 'state';
+  /* Field: Content: Unit Code */
+  $handler->display->display_options['fields']['field_unit_code']['id'] = 'field_unit_code';
+  $handler->display->display_options['fields']['field_unit_code']['table'] = 'field_data_field_unit_code';
+  $handler->display->display_options['fields']['field_unit_code']['field'] = 'field_unit_code';
+  /* Field: Content: Pre-2013 Unit Code */
+  $handler->display->display_options['fields']['field_pre_2013_unit_code']['id'] = 'field_pre_2013_unit_code';
+  $handler->display->display_options['fields']['field_pre_2013_unit_code']['table'] = 'field_data_field_pre_2013_unit_code';
+  $handler->display->display_options['fields']['field_pre_2013_unit_code']['field'] = 'field_pre_2013_unit_code';
+  $handler->display->display_options['fields']['field_pre_2013_unit_code']['hide_empty'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -802,13 +815,6 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -842,6 +848,22 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator'] = 'field_years_offered_value_op';
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['identifier'] = 'field_years_offered_value';
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
