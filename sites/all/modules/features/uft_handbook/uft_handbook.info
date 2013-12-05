@@ -21,7 +21,6 @@ features[field_base][] = body
 features[field_instance][] = node-book-body
 features[field_instance][] = node-book-field_file_attachments
 features[menu_custom][] = main-menu
-features[menu_links][] = main-menu:node/1703
 features[node][] = book
 features[user_permission][] = access printer-friendly version
 features[user_permission][] = add content to books

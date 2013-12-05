@@ -30,26 +30,55 @@ function uft_units_views_default_views() {
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_unit_semester',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['columns'] = array(
-    'views_bulk_operations' => 'views_bulk_operations',
+    'field_unit_semester' => 'field_unit_semester',
+    'field_unit_day' => 'field_unit_day',
+    'field_unit_time' => 'field_unit_time',
     'field_unit_code' => 'field_unit_code',
     'title' => 'title',
     'field_courses' => 'field_courses',
     'field_mode_of_teaching' => 'field_mode_of_teaching',
+    'field_class_location' => 'field_class_location',
+    'field_lecturer_reference' => 'field_lecturer_reference',
+    'field_undergraduate_level' => 'field_undergraduate_level',
     'field_postgraduate_level' => 'field_postgraduate_level',
-    'field_mdiv_type_of_study' => 'field_mdiv_type_of_study',
+    'field_years_offered' => 'field_years_offered',
+    'field_unit_timetable_notes' => 'field_unit_timetable_notes',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'views_bulk_operations' => array(
+    'field_unit_semester' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'field_unit_day' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_unit_time' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
     'field_unit_code' => array(
       'sortable' => 1,
@@ -75,14 +104,40 @@ function uft_units_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_postgraduate_level' => array(
-      'sortable' => 1,
+    'field_class_location' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_lecturer_reference' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_undergraduate_level' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 1,
     ),
-    'field_mdiv_type_of_study' => array(
+    'field_postgraduate_level' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
+    'field_years_offered' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_unit_timetable_notes' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 1,
@@ -94,7 +149,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Use this form to search for units offered by UFT.
 
-You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT_2013_Timetable_linked_20130801.pdf">PDF version of the timetable for 2013</a></strong>.';
+You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT_2014_Timetable_20131109_revised.pdf">PDF version of the timetable for 2014</a></strong>.';
   $handler->display->display_options['header']['area']['format'] = 'html';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -161,6 +216,15 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['fields']['field_class_location']['table'] = 'field_data_field_class_location';
   $handler->display->display_options['fields']['field_class_location']['field'] = 'field_class_location';
   $handler->display->display_options['fields']['field_class_location']['hide_empty'] = TRUE;
+  /* Field: Content: Lecturer */
+  $handler->display->display_options['fields']['field_lecturer_reference']['id'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['table'] = 'field_data_field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['field'] = 'field_lecturer_reference';
+  $handler->display->display_options['fields']['field_lecturer_reference']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_lecturer_reference']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_lecturer_reference']['multi_type'] = 'ul';
   /* Field: Content: Undergraduate Level */
   $handler->display->display_options['fields']['field_undergraduate_level']['id'] = 'field_undergraduate_level';
   $handler->display->display_options['fields']['field_undergraduate_level']['table'] = 'field_data_field_undergraduate_level';
@@ -175,11 +239,6 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['fields']['field_postgraduate_level']['table'] = 'field_data_field_postgraduate_level';
   $handler->display->display_options['fields']['field_postgraduate_level']['field'] = 'field_postgraduate_level';
   $handler->display->display_options['fields']['field_postgraduate_level']['hide_empty'] = TRUE;
-  /* Field: Content: MDiv Type of Study */
-  $handler->display->display_options['fields']['field_mdiv_type_of_study']['id'] = 'field_mdiv_type_of_study';
-  $handler->display->display_options['fields']['field_mdiv_type_of_study']['table'] = 'field_data_field_mdiv_type_of_study';
-  $handler->display->display_options['fields']['field_mdiv_type_of_study']['field'] = 'field_mdiv_type_of_study';
-  $handler->display->display_options['fields']['field_mdiv_type_of_study']['hide_empty'] = TRUE;
   /* Field: Content: Years Offered */
   $handler->display->display_options['fields']['field_years_offered']['id'] = 'field_years_offered';
   $handler->display->display_options['fields']['field_years_offered']['table'] = 'field_data_field_years_offered';
@@ -189,6 +248,12 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
     'prefix_suffix' => 1,
   );
   $handler->display->display_options['fields']['field_years_offered']['delta_offset'] = '0';
+  /* Field: Content: Unit Timetable Notes */
+  $handler->display->display_options['fields']['field_unit_timetable_notes']['id'] = 'field_unit_timetable_notes';
+  $handler->display->display_options['fields']['field_unit_timetable_notes']['table'] = 'field_data_field_unit_timetable_notes';
+  $handler->display->display_options['fields']['field_unit_timetable_notes']['field'] = 'field_unit_timetable_notes';
+  $handler->display->display_options['fields']['field_unit_timetable_notes']['label'] = 'Notes';
+  $handler->display->display_options['fields']['field_unit_timetable_notes']['hide_empty'] = TRUE;
   /* Sort criterion: Content: Unit Semester (field_unit_semester) */
   $handler->display->display_options['sorts']['field_unit_semester_value']['id'] = 'field_unit_semester_value';
   $handler->display->display_options['sorts']['field_unit_semester_value']['table'] = 'field_data_field_unit_semester';
@@ -303,7 +368,7 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['filters']['field_years_offered_value']['id'] = 'field_years_offered_value';
   $handler->display->display_options['filters']['field_years_offered_value']['table'] = 'field_data_field_years_offered';
   $handler->display->display_options['filters']['field_years_offered_value']['field'] = 'field_years_offered_value';
-  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2013';
+  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2014';
   $handler->display->display_options['filters']['field_years_offered_value']['group'] = 1;
   $handler->display->display_options['filters']['field_years_offered_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator_id'] = 'field_years_offered_value_op';
@@ -662,8 +727,15 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
       'override_label' => 0,
       'label' => '',
     ),
+    'action::revisioning_delete_archived_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
     'action::views_bulk_operations_delete_item' => array(
-      'selected' => 0,
+      'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -726,6 +798,13 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
       'override_label' => 0,
       'label' => '',
     ),
+    'action::revisioning_publish_latest_revision_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
     'action::node_unpromote_action' => array(
       'selected' => 0,
       'postpone_processing' => 0,
@@ -769,7 +848,7 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
       'label' => '',
     ),
     'action::pathauto_node_update_action' => array(
-      'selected' => 0,
+      'selected' => 1,
       'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
@@ -805,16 +884,14 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['fields']['field_lecturer_reference']['id'] = 'field_lecturer_reference';
   $handler->display->display_options['fields']['field_lecturer_reference']['table'] = 'field_data_field_lecturer_reference';
   $handler->display->display_options['fields']['field_lecturer_reference']['field'] = 'field_lecturer_reference';
-  $handler->display->display_options['fields']['field_lecturer_reference']['label'] = 'Lecturer reference';
   $handler->display->display_options['fields']['field_lecturer_reference']['settings'] = array(
     'link' => 0,
   );
   $handler->display->display_options['fields']['field_lecturer_reference']['delta_offset'] = '0';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Unit Code (field_unit_code) */
+  $handler->display->display_options['sorts']['field_unit_code_value']['id'] = 'field_unit_code_value';
+  $handler->display->display_options['sorts']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
+  $handler->display->display_options['sorts']['field_unit_code_value']['field'] = 'field_unit_code_value';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -822,29 +899,14 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['filters']['type']['value'] = array(
     'unit' => 'unit',
   );
-  /* Filter criterion: Content: Department (field_department) */
-  $handler->display->display_options['filters']['field_department_value']['id'] = 'field_department_value';
-  $handler->display->display_options['filters']['field_department_value']['table'] = 'field_data_field_department';
-  $handler->display->display_options['filters']['field_department_value']['field'] = 'field_department_value';
-  $handler->display->display_options['filters']['field_department_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_department_value']['expose']['operator_id'] = 'field_department_value_op';
-  $handler->display->display_options['filters']['field_department_value']['expose']['label'] = 'Department (field_department)';
-  $handler->display->display_options['filters']['field_department_value']['expose']['operator'] = 'field_department_value_op';
-  $handler->display->display_options['filters']['field_department_value']['expose']['identifier'] = 'field_department_value';
-  $handler->display->display_options['filters']['field_department_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
   /* Filter criterion: Content: Years Offered (field_years_offered) */
   $handler->display->display_options['filters']['field_years_offered_value']['id'] = 'field_years_offered_value';
   $handler->display->display_options['filters']['field_years_offered_value']['table'] = 'field_data_field_years_offered';
   $handler->display->display_options['filters']['field_years_offered_value']['field'] = 'field_years_offered_value';
-  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2013';
+  $handler->display->display_options['filters']['field_years_offered_value']['value']['value'] = '2014';
   $handler->display->display_options['filters']['field_years_offered_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator_id'] = 'field_years_offered_value_op';
-  $handler->display->display_options['filters']['field_years_offered_value']['expose']['label'] = 'Years Offered (field_years_offered)';
+  $handler->display->display_options['filters']['field_years_offered_value']['expose']['label'] = 'Years Offered';
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['operator'] = 'field_years_offered_value_op';
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['identifier'] = 'field_years_offered_value';
   $handler->display->display_options['filters']['field_years_offered_value']['expose']['remember_roles'] = array(
@@ -864,6 +926,36 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: Unit Code (field_unit_code) */
+  $handler->display->display_options['filters']['field_unit_code_value']['id'] = 'field_unit_code_value';
+  $handler->display->display_options['filters']['field_unit_code_value']['table'] = 'field_data_field_unit_code';
+  $handler->display->display_options['filters']['field_unit_code_value']['field'] = 'field_unit_code_value';
+  $handler->display->display_options['filters']['field_unit_code_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_unit_code_value']['expose']['operator_id'] = 'field_unit_code_value_op';
+  $handler->display->display_options['filters']['field_unit_code_value']['expose']['label'] = 'Unit Code';
+  $handler->display->display_options['filters']['field_unit_code_value']['expose']['operator'] = 'field_unit_code_value_op';
+  $handler->display->display_options['filters']['field_unit_code_value']['expose']['identifier'] = 'field_unit_code_value';
+  $handler->display->display_options['filters']['field_unit_code_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Content: State */
+  $handler->display->display_options['filters']['state']['id'] = 'state';
+  $handler->display->display_options['filters']['state']['table'] = 'node';
+  $handler->display->display_options['filters']['state']['field'] = 'state';
+  $handler->display->display_options['filters']['state']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['state']['expose']['operator_id'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['label'] = 'State';
+  $handler->display->display_options['filters']['state']['expose']['operator'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['identifier'] = 'state';
+  $handler->display->display_options['filters']['state']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,

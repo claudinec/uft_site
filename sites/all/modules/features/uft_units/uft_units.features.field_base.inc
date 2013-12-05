@@ -36,6 +36,9 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_class_location',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
@@ -46,6 +49,7 @@ function uft_units_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'CTC' => 'Catholic Theological College',
         'CTM' => 'Centre for Theology and Ministry',
         'ICSPF' => 'Institute for Christian Spirituality and Pastoral Formation',
         'JTC' => 'Jesuit Theological College',
@@ -741,7 +745,7 @@ function uft_units_field_default_field_bases() {
   // Exported field_base: 'field_proposed_by'
   $field_bases['field_proposed_by'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_proposed_by',
@@ -818,6 +822,9 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_rti',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
@@ -828,6 +835,7 @@ function uft_units_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'C' => 'Catholic Theological College',
         'M' => 'MCD University of Divinity',
         'U' => 'United Faculty of Theology',
         'W' => 'Whitley College',
@@ -996,6 +1004,9 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_undergraduate_level',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -1126,6 +1137,9 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_unit_disciplines',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -1183,6 +1197,9 @@ function uft_units_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_unit_frequency',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(),
     'indexes' => array(
       'value' => array(

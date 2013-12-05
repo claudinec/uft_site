@@ -364,9 +364,7 @@ function uft_users_user_default_permissions() {
   // Exported permission: 'bypass node access'.
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
