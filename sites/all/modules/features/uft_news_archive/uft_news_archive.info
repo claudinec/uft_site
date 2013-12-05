@@ -22,7 +22,6 @@ features[feeds_importer][] = news_archive
 features[field_base][] = field_tags
 features[field_instance][] = node-article-body
 features[field_instance][] = node-article-field_tags
-features[menu_links][] = main-menu:news-archive
 features[node][] = article
 features[taxonomy][] = tags
 features[variable][] = menu_options_article

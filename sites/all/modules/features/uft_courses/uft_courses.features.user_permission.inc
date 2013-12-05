@@ -13,7 +13,10 @@ function uft_courses_user_default_permissions() {
   // Exported permission: 'create course content'.
   $permissions['create course content'] = array(
     'name' => 'create course content',
-    'roles' => array(),
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
+    ),
     'module' => 'node',
   );
 
@@ -36,6 +39,7 @@ function uft_courses_user_default_permissions() {
     'name' => 'edit any course content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'node',
   );
@@ -45,6 +49,7 @@ function uft_courses_user_default_permissions() {
     'name' => 'edit own course content',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'node',
   );

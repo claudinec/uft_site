@@ -56,7 +56,7 @@ function uft_units_feeds_importer_default() {
           2 => array(
             'source' => 'Path',
             'target' => 'path_alias',
-            'pathauto_override' => 1,
+            'pathauto_override' => 0,
           ),
           3 => array(
             'source' => 'Body',

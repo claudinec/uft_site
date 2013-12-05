@@ -24,6 +24,7 @@ function uft_handbook_user_default_permissions() {
     'name' => 'add content to books',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'book',
   );
@@ -33,6 +34,7 @@ function uft_handbook_user_default_permissions() {
     'name' => 'administer book outlines',
     'roles' => array(
       'Administrator' => 'Administrator',
+      'Staff' => 'Staff',
     ),
     'module' => 'book',
   );

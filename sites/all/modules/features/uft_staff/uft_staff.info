@@ -54,7 +54,6 @@ features[field_instance][] = node-staff_profile-field_staff_type
 features[field_instance][] = node-staff_profile-field_surname
 features[field_instance][] = node-staff_profile-field_teaching_interests
 features[field_instance][] = node-staff_profile-field_website
-features[menu_links][] = main-menu:staff
 features[node][] = staff_profile
 features[user_permission][] = create staff_profile content
 features[user_permission][] = delete any staff_profile content
