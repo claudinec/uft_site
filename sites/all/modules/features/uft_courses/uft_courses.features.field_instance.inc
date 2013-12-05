@@ -371,7 +371,7 @@ function uft_courses_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_mcd_url',
-    'label' => 'MCD URL',
+    'label' => 'Univeristy of Divinity URL',
     'required' => 1,
     'settings' => array(
       'attributes' => array(
@@ -385,10 +385,14 @@ function uft_courses_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'rel_remove' => 'default',
       'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => 'Course information on MCD University of Divinity website',
+      'title_value' => 'Course information on University of Divinity website',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -453,8 +457,8 @@ function uft_courses_field_default_field_instances() {
   t('File attachments');
   t('Graduate Outcomes');
   t('Is this course undergraduate or postgraduate, coursework or research?');
-  t('MCD URL');
   t('Modes of Study');
+  t('Univeristy of Divinity URL');
 
   return $field_instances;
 }
