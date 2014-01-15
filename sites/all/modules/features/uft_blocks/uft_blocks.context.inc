@@ -13,6 +13,39 @@ function uft_blocks_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'contact-blocks';
+  $context->description = 'Blocks to display on the contact page';
+  $context->tag = 'blocks';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'contact' => 'contact',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-contact' => array(
+          'module' => 'boxes',
+          'delta' => 'contact',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Blocks to display on the contact page');
+  t('blocks');
+  $export['contact-blocks'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'front_blocks';
   $context->description = 'Blocks to display only on the front page.';
   $context->tag = 'blocks';
