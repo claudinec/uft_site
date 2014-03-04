@@ -50,7 +50,137 @@ function uft_news_archive_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_file_attachments'
+  $field_instances['node-article-field_file_attachments'] = array(
+    'bundle' => 'article',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_file_attachments',
+    'label' => 'File attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'attachments',
+      'file_extensions' => 'txt pdf doc docx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_image'
+  $field_instances['node-article-field_image'] = array(
+    'bundle' => 'article',
+    'deleted' => 0,
+    'description' => 'Upload an image to go with this article.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'large',
+        ),
+        'type' => 'image',
+        'weight' => -1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => -1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => TRUE,
+      'default_image' => 0,
+      'file_directory' => 'field/image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
     ),
   );
 
@@ -90,7 +220,7 @@ function uft_news_archive_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
@@ -98,7 +228,10 @@ function uft_news_archive_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Enter a comma-separated list of words to describe your content.');
+  t('File attachments');
+  t('Image');
   t('Tags');
+  t('Upload an image to go with this article.');
 
   return $field_instances;
 }
