@@ -7,6 +7,7 @@ project = uft_news_archive
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = feeds
+dependencies[] = file
 dependencies[] = image
 dependencies[] = menu
 dependencies[] = strongarm
