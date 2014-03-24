@@ -1,6 +1,11 @@
 HISTORY
 =======
 
+Release 2.1 (2014-03-24)
+------------------------
+
+- Update logo/banner: replace old MCDU logo with new UD one
+
 Sprint 35 (2013-10-14)
 ----------------------
 
