@@ -9,6 +9,7 @@ dependencies[] = context
 dependencies[] = ctools
 dependencies[] = menu
 dependencies[] = search
+dependencies[] = views
 features[box][] = banner_imagemap
 features[box][] = contact
 features[box][] = footer_ack

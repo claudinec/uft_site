@@ -50,7 +50,7 @@ function uft_events_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 4,
     ),
   );
 
@@ -106,7 +106,7 @@ function uft_events_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 32,
+      'weight' => 5,
     ),
   );
 
@@ -146,7 +146,7 @@ function uft_events_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 33,
+      'weight' => 6,
     ),
   );
 
@@ -209,17 +209,62 @@ function uft_events_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 35,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_highlighted_event'
+  $field_instances['node-event-field_highlighted_event'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box to display this event in the Upcoming Events block on the sidebar.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_highlighted_event',
+    'label' => 'Highlighted event',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Check this box to display this event in the Upcoming Events block on the sidebar.');
   t('Date and time for this event, with an optional end date and time.');
   t('Event date');
   t('Event location');
   t('File attachments');
+  t('Highlighted event');
 
   return $field_instances;
 }
