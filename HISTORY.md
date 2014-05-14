@@ -1,6 +1,12 @@
 HISTORY
 =======
 
+Sprint 65 (2014-05-12)
+----------------------
+
+- Add highlighted events field to event content type.
+- Display highlighted events as Upcoming Events in sidebar.
+
 Release 2.1 (2014-03-24)
 ------------------------
 
