@@ -66,6 +66,12 @@ function uft_blocks_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
+        'views-events-block_1' => array(
+          'module' => 'views',
+          'delta' => 'events-block_1',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
