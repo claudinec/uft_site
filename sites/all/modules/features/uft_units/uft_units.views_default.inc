@@ -149,7 +149,7 @@ function uft_units_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Use this form to search for units offered by UFT.
 
-You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT_2014_Timetable_20131109_revised.pdf">PDF version of the timetable for 2014</a></strong>.';
+You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT_2014_Timetable_20140512.pdf">PDF version of the timetable for 2014</a></strong>.';
   $handler->display->display_options['header']['area']['format'] = 'html';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -771,6 +771,7 @@ You can also download a <strong><a href="/sites/uft.edu.au/files/information/UFT
       'settings' => array(
         'show_all_tokens' => 1,
         'display_values' => array(
+          'unit::field_years_offered' => 'unit::field_years_offered',
           'unit::field_lecturer_reference' => 'unit::field_lecturer_reference',
         ),
       ),

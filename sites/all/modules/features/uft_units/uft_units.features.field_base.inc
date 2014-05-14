@@ -836,7 +836,7 @@ function uft_units_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'C' => 'Catholic Theological College',
-        'M' => 'MCD University of Divinity',
+        'M' => 'University of Divinity',
         'U' => 'United Faculty of Theology',
         'W' => 'Whitley College',
         'Y' => 'Yarra Theological Union',
