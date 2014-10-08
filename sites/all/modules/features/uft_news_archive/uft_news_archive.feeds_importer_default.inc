@@ -23,7 +23,7 @@ function uft_news_archive_feeds_importer_default() {
         'auto_detect_feeds' => 1,
         'use_pubsubhubbub' => 0,
         'designated_hub' => '',
-        'request_timeout' => '',
+        'request_timeout' => '120',
       ),
     ),
     'parser' => array(
@@ -64,7 +64,7 @@ function uft_news_archive_feeds_importer_default() {
     'import_period' => '86400',
     'expire_period' => 3600,
     'import_on_create' => 1,
-    'process_in_background' => 0,
+    'process_in_background' => 1,
   );
   $export['mailchimp'] = $feeds_importer;
 

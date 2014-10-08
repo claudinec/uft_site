@@ -15,7 +15,7 @@ function uft_events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Use this field to add a detailed description or additional information about the event.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -37,13 +37,40 @@ function uft_events_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'html' => 'html',
+          'mailchimp_campaign' => 'mailchimp_campaign',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'html' => array(
+              'weight' => -10,
+            ),
+            'mailchimp_campaign' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -226,9 +253,8 @@ function uft_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'teaser' => array(
@@ -265,6 +291,7 @@ function uft_events_field_default_field_instances() {
   t('Event location');
   t('File attachments');
   t('Highlighted event');
+  t('Use this field to add a detailed description or additional information about the event.');
 
   return $field_instances;
 }

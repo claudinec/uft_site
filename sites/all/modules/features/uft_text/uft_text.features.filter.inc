@@ -55,7 +55,7 @@ function uft_text_filter_default_formats() {
         'weight' => -50,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<p> <br> <h2> <h3> <a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <iframe> <table>',
+          'allowed_html' => '<p> <br> <h2> <h3> <a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <img> <iframe> <table> <td> <tr> <th> <caption>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),

@@ -37,6 +37,38 @@ function uft_blocks_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'contact';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Contact';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p>The <strong>United Faculty of Theology Office</strong> is located at the Uniting Church Centre for Theology and Ministry (CTM), 29 College Crescent, Parkville, 3052.</p><p>Email: registrar@uft.edu.au</p><p>Telephone: (03) 9340 8890</p><p>You can also use the following form to contact us.</p>',
+      'format' => 'html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['contact'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'footer_ack';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Footer - Acknowledgements';
+  $box->options = array(
+    'body' => array(
+      'value' => '<p style="border-top: solid thin; font-size: small; text-align:center">© United Faculty of Theology, 2008-2014. 29 College Crescent, Parkville 3052 Australia.  Phone: +61 3 9340 8890. Email: registrar@uft.edu.au. A College of the <a href="http://www.divinity.edu.au/">University of Divinity</a>.<BR> Website developed by <a href="http://www.claudinechionh.net">Claudine Chionh</a> and designed by Malcolm Monteith.</p>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['footer_ack'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'indigenous_statement_box';
   $box->plugin_key = 'simple';
   $box->title = 'Statement of Commitment to Indigenous Peoples';
