@@ -2087,7 +2087,7 @@ function uft_units_field_default_field_instances() {
     'label' => 'Years Offered',
     'required' => 0,
     'settings' => array(
-      'max' => 2020,
+      'max' => 2014,
       'min' => 2009,
       'prefix' => '',
       'suffix' => '',
