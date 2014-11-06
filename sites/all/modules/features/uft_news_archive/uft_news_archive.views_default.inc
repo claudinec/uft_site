@@ -81,6 +81,9 @@ function uft_news_archive_views_default_views() {
 
   /* Display: JSON */
   $handler = $view->new_display('page', 'JSON', 'page_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_json';
   $handler->display->display_options['style_options']['plaintext_output'] = 0;
