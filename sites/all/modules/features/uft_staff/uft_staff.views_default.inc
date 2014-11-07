@@ -193,6 +193,106 @@ function uft_staff_views_default_views() {
     1 => '1',
     2 => '2',
   );
+
+  /* Display: JSON */
+  $handler = $view->new_display('page', 'JSON', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_json';
+  $handler->display->display_options['style_options']['plaintext_output'] = 0;
+  $handler->display->display_options['style_options']['remove_newlines'] = 0;
+  $handler->display->display_options['style_options']['jsonp_prefix'] = '';
+  $handler->display->display_options['style_options']['using_views_api_mode'] = 0;
+  $handler->display->display_options['style_options']['object_arrays'] = 0;
+  $handler->display->display_options['style_options']['numeric_strings'] = 0;
+  $handler->display->display_options['style_options']['bigint_string'] = 0;
+  $handler->display->display_options['style_options']['pretty_print'] = 0;
+  $handler->display->display_options['style_options']['unescaped_slashes'] = 0;
+  $handler->display->display_options['style_options']['unescaped_unicode'] = 0;
+  $handler->display->display_options['style_options']['char_encoding'] = array();
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Staff type */
+  $handler->display->display_options['fields']['field_staff_type']['id'] = 'field_staff_type';
+  $handler->display->display_options['fields']['field_staff_type']['table'] = 'field_data_field_staff_type';
+  $handler->display->display_options['fields']['field_staff_type']['field'] = 'field_staff_type';
+  $handler->display->display_options['fields']['field_staff_type']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_type']['element_label_colon'] = FALSE;
+  /* Field: Content: Surname */
+  $handler->display->display_options['fields']['field_surname']['id'] = 'field_surname';
+  $handler->display->display_options['fields']['field_surname']['table'] = 'field_data_field_surname';
+  $handler->display->display_options['fields']['field_surname']['field'] = 'field_surname';
+  $handler->display->display_options['fields']['field_surname']['label'] = '';
+  $handler->display->display_options['fields']['field_surname']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_surname']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
+  /* Field: Content: College */
+  $handler->display->display_options['fields']['field_college']['id'] = 'field_college';
+  $handler->display->display_options['fields']['field_college']['table'] = 'field_data_field_college';
+  $handler->display->display_options['fields']['field_college']['field'] = 'field_college';
+  $handler->display->display_options['fields']['field_college']['hide_empty'] = TRUE;
+  /* Field: Content: Department */
+  $handler->display->display_options['fields']['field_department']['id'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['table'] = 'field_data_field_department';
+  $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
+  $handler->display->display_options['fields']['field_department']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_department']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_department']['multi_type'] = 'ol';
+  /* Field: Content: Postgraduate supervision */
+  $handler->display->display_options['fields']['field_postgraduate_supervision']['id'] = 'field_postgraduate_supervision';
+  $handler->display->display_options['fields']['field_postgraduate_supervision']['table'] = 'field_data_field_postgraduate_supervision';
+  $handler->display->display_options['fields']['field_postgraduate_supervision']['field'] = 'field_postgraduate_supervision';
+  $handler->display->display_options['fields']['field_postgraduate_supervision']['hide_empty'] = TRUE;
+  /* Field: Content: Publications */
+  $handler->display->display_options['fields']['field_publications']['id'] = 'field_publications';
+  $handler->display->display_options['fields']['field_publications']['table'] = 'field_data_field_publications';
+  $handler->display->display_options['fields']['field_publications']['field'] = 'field_publications';
+  $handler->display->display_options['fields']['field_publications']['hide_empty'] = TRUE;
+  /* Field: Content: Qualifications */
+  $handler->display->display_options['fields']['field_qualifications']['id'] = 'field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['table'] = 'field_data_field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['field'] = 'field_qualifications';
+  $handler->display->display_options['fields']['field_qualifications']['hide_empty'] = TRUE;
+  /* Field: Content: Research interests */
+  $handler->display->display_options['fields']['field_research_interests']['id'] = 'field_research_interests';
+  $handler->display->display_options['fields']['field_research_interests']['table'] = 'field_data_field_research_interests';
+  $handler->display->display_options['fields']['field_research_interests']['field'] = 'field_research_interests';
+  $handler->display->display_options['fields']['field_research_interests']['hide_empty'] = TRUE;
+  /* Field: Content: Teaching interests */
+  $handler->display->display_options['fields']['field_teaching_interests']['id'] = 'field_teaching_interests';
+  $handler->display->display_options['fields']['field_teaching_interests']['table'] = 'field_data_field_teaching_interests';
+  $handler->display->display_options['fields']['field_teaching_interests']['field'] = 'field_teaching_interests';
+  $handler->display->display_options['fields']['field_teaching_interests']['hide_empty'] = TRUE;
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_website']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_website']['multi_type'] = 'ol';
+  $handler->display->display_options['path'] = 'staff.json';
   $export['staff'] = $view;
 
   return $export;
