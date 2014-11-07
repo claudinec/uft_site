@@ -1,6 +1,11 @@
 HISTORY
 =======
 
+Release 2.2-a (2014-11-07)
+--------------------------
+
+- JSON exporters for events, courses, news, information and staff
+
 Sprint 65 (2014-05-12)
 ----------------------
 
